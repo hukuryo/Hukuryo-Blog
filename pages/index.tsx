@@ -1,6 +1,8 @@
 import { client } from "@/lib/client";
-import { DEV_CLIENT_PAGES_MANIFEST } from "next/dist/shared/lib/constants";
 import Link from "next/link";
+
+import { Header } from "../components/Header"
+
 
 type BlogContent = {
   id: number;
@@ -25,10 +27,11 @@ interface HomeProps {
 export default function Home({ blog }: HomeProps) {
   return (
     <div>
+      <Header />
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
-            <Link href={`blog/${blog.id}`} legacyBehavior>
+            <Link href={`books/${blog.id}`} legacyBehavior>
               <a href="">{blog.title}</a>
             </Link>
           </li>
