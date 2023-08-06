@@ -23,7 +23,7 @@ return (
 };
 
 export const getStaticProps: GetStaticProps<BlogIdProps> = async (context) => {
-    const id = context.params?.id;
+    const id = context.params?.id as string;
     const data = await client.get({ endpoint: "ryoheiblog", contentId: id });
 
     return {

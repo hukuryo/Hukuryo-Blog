@@ -1,15 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { client } from "@/lib/client";
 import Link from "next/link";
 
 import { Header } from "../components/Header"
+import { FooterForm } from "../components/FooterForm";
+import { SideBar } from "../components/SideBar";
+import { PageTitle } from "../components/PageTitle"
+import ArticleList from "../components/ArticleList";
 
-
-type BlogContent = {
-  id: number;
-  title: string;
-};
-
-// SSG
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "ryoheiblog" });
 
@@ -20,23 +19,31 @@ export const getStaticProps = async () => {
   };
 };
 
+type BlogContent = {
+  id: number;
+  title: string;
+};
+
 interface HomeProps {
   blog: BlogContent[];
 }
 
 export default function Home({ blog }: HomeProps) {
   return (
-    <div>
+    <>
       <Header />
-      <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`books/${blog.id}`} legacyBehavior>
-              <a href="">{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <main className="md:container md:mx-auto">
+          <div className="flex flex-row-reverse">
+              <SideBar/>
+              <div className="mt-10 mr-3 ml-5 w-full rounded-md">
+                  <div>
+                      <PageTitle title={"最新の記事"}/>
+                  </div>
+                  <ArticleList articles={blog} />
+                  <FooterForm />
+              </div>
+          </div>
+      </main>
+    </>
   );
 }
