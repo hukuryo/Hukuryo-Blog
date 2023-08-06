@@ -1,34 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { client } from "@/lib/client";
-import Link from "next/link";
 
 import { Header } from "../components/Header"
 import { FooterForm } from "../components/FooterForm";
 import { SideBar } from "../components/SideBar";
 import { PageTitle } from "../components/PageTitle"
 import ArticleList from "../components/ArticleList";
+import { ArticleProps, ArticleContent } from "../types/article";
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "ryoheiblog" });
 
   return {
     props: {
-      blog: data.contents,
+      articles: data.contents,
     },
   };
 };
 
-type BlogContent = {
-  id: number;
-  title: string;
-};
-
-interface HomeProps {
-  blog: BlogContent[];
-}
-
-export default function Home({ blog }: HomeProps) {
+export default function Home({ articles }: ArticleProps) {
   return (
     <>
       <Header />
@@ -39,7 +30,7 @@ export default function Home({ blog }: HomeProps) {
                   <div>
                       <PageTitle title={"最新の記事"}/>
                   </div>
-                  <ArticleList articles={blog} />
+                  <ArticleList articles={articles} />
                   <FooterForm />
               </div>
           </div>

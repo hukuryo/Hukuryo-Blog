@@ -6,27 +6,20 @@ import { FooterForm } from "../../components/FooterForm";
 import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle";
 import ArticleList from "../../components/ArticleList";
+import { ArticleProps, ArticleContent } from "../../types/article";
 
 export const getStaticProps = async () => {
     const data = await client.get({ endpoint: "ryoheiblog" });
     
     return {
         props: {
-            blog: data.contents,
+            articles: data.contents,
         },
     };
 };
 
-type BlogContent = {
-    id: number;
-    title: string;
-};
 
-type HomeProps = {
-    blog: BlogContent[];
-};
-
-export default function Article({ blog }: HomeProps) {
+export default function Article({ articles }: ArticleProps) {
     return (
         <>
             <Header />
@@ -37,7 +30,7 @@ export default function Article({ blog }: HomeProps) {
                     <div>
                     <PageTitle title={"技術記事一覧"} />
                     </div>
-                    <ArticleList articles={blog} />
+                    <ArticleList articles={ articles } />
                     <FooterForm />
                 </div>
                 </div>
