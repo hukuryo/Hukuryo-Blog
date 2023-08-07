@@ -17,7 +17,7 @@ export function SideBar() {
                             フロント中心に頑張っています。
                         </p>
                         <div className='mb-10 mt-10 flex items-center justify-center '>
-                            <button className="shadow-lg hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-1">
+                            <button className="shadow-lg ease-in-out duration-300 hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-1">
                                 <Link className="text-xs" href="/profile">プロフィール</Link>
                             </button>
                         </div>

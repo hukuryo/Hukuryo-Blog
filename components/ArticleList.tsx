@@ -18,7 +18,7 @@ type ArticleListProps = {
 
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
     return (
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {articles.map((article) => (
             <li
             className="col-span-1 rounded-lg shadow-lg bg-white p-2 transition-transform transform hover:scale-105"

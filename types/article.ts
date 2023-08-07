@@ -8,3 +8,16 @@ export type ArticleContent = {
 export type ArticleProps = {
     articles: ArticleContent[];
 };
+
+
+export type BlogContent = {
+    id: number;
+    imageUrl: string;
+    title: string;
+    publishedAt: string;
+    body: string;
+};
+
+export type BlogIdProps = {
+    blog: BlogContent;
+};
