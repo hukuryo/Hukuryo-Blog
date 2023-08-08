@@ -11,10 +11,10 @@ export function Header() {
                         <h1 className="font-bold text-2xl w-80">Hukuryo-no-Blog</h1>
                     </div>
                     <div className="items-center justify-center hidden col-span-1 space-x-3 sm:flex w-96">
-                        <Link href="/" legacyBehavior><a className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">トップページ</a></Link>
-                        <Link href="/articles" legacyBehavior><a className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">記事一覧</a></Link>
-                        <Link href="/profile" legacyBehavior><a className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">プロフィール</a></Link>
-                        <Link href="/books" legacyBehavior><a className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">IT書籍紹介</a></Link>
+                        <Link href="/" className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">トップページ</Link>
+                        <Link href="/articles" className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">記事一覧</Link>
+                        <Link href="/profile" className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">プロフィール</Link>
+                        <Link href="/books" className="text-sm ease-in-out duration-300 hover:border-black font-bold hover:border-b-4">IT書籍紹介</Link>
                     </div>
                     <div className="flex justify-end col-span-2">
                         <button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar" aria-controls="cta-button-sidebar" type="button" className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-700 rounded-lg sm:hidden bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600">
