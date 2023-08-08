@@ -6,8 +6,7 @@ import { client } from "@/lib/client";
 import { Header } from "../../components/Header";
 import { FooterForm } from "../../components/FooterForm";
 import { SideBar } from "../../components/SideBar";
-// import { BlogIdProps } from "../../types/article";
-import { ArticleProps, BlogIdProps, ArticleContent } from "../../types/article";
+import { BlogIdProps, ArticleContent } from "../../types/article";
 
 const BlogId: React.FC<BlogIdProps> = ({ blog }) => {
     const createdDate = new Date(blog.publishedAt).toLocaleDateString("ja-JP", {
@@ -51,7 +50,7 @@ export const getStaticProps: GetStaticProps<BlogIdProps> = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
     const data = await client.get({ endpoint: "ryoheiblog" });
 
-    const paths = data.contents.map((content: BlogIdProps) => `/books/${content.id}`);
+    const paths = data.contents.map((content: ArticleContent) => `/books/${content.id}`);
     return {
         paths,
         fallback: false,
