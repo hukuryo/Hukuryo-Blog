@@ -13,14 +13,15 @@ export function Header() {
                 <h1 className="font-bold text-2xl text-white flex justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
             </div>
             <div className="shadow-lg sm:flex sm:justify-center sm:items-center h-20 border border-gray-200 bg-blue-500 dark:border-gray-600 dark:bg-gray-700">
-                <div className="items-center justify-center hidden col-span-1 space-x-3 sm:flex w-full">
-                    <Link href="/" className="text-sm text-white pr-2.5 ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">トップページ</Link>
-                    <Link href="/articles" className="text-sm px-2.5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">記事一覧</Link>
-                    <Link href="/profile" className="text-sm px-2.5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">プロフィール</Link>
-                    <Link href="/books" className="text-sm pl-2.5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">IT書籍紹介</Link>
+                <div className="items-center justify-center hidden  sm:flex w-full">
+                    <Link href="/" className="text-sm text-white px-5 ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">トップページ</Link>
+                    <Link href="/articles" className="text-sm px-5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">記事一覧</Link>
+                    <Link href="/profile" className="text-sm px-5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">プロフィール</Link>
+                    <Link href="/books" className="text-sm px-5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">IT書籍紹介</Link>
                 </div>
                 <div className="sm:hidden">
-                    <div className="flex justify-end h-full mt-7 mr-10 col-span-2">
+                    <div className="flex justify-between items-center h-full mt-7 mx-4">
+                        <h1 className="font-bold text-2xl text-white">Hukuryo-no-Blog</h1>
                         <button
                             onClick={handleMenuOpen}
                             type="button"
