@@ -5,6 +5,8 @@ import { FooterForm } from "../../components/FooterForm";
 import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle"
 import ArticleList from "../../components/ArticleList";
+import { Footer } from "../../components/Footer";
+import { ScrollUp } from "@/components/ScrollUp";
 import { ArticleProps, ArticleContent } from "../../types/article";
 
 
@@ -30,10 +32,12 @@ export default function books({ articles }: ArticleProps) {
                             <PageTitle title={"読んだ書籍一覧"}/>
                         </div>
                         <ArticleList articles={ articles } />
-                        <FooterForm />
+                        <ScrollUp />
+                        {/* <FooterForm /> */}
                     </div>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }

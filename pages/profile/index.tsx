@@ -1,9 +1,11 @@
 "use client"
 
-import { Header } from "../../components/Header"
+import { Header } from "../../components/Header";
 import { FooterForm } from "../../components/FooterForm";
 import { SideBar } from "../../components/SideBar";
-import { PageTitle } from "../../components/PageTitle"
+import { PageTitle } from "../../components/PageTitle";
+import { Footer } from "../../components/Footer";
+import { ScrollUp } from "@/components/ScrollUp";
 
 export default function profile() {
     return (
@@ -29,10 +31,12 @@ export default function profile() {
                             <p className="mb-10">大学まで野球をやっていました。</p>
                             <p>趣味はスポーツ観戦、映画鑑賞、漫画を読むこと</p>
                         </div>
-                    <FooterForm />
+                        <ScrollUp />
+                        {/* <FooterForm /> */}
                     </div>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }
