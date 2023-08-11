@@ -1,6 +1,6 @@
 export function FooterForm() {
     return (
-        <footer className='mt-32 w-full'>
+        <div className='mt-32 w-full'>
             <p className='font-bold mb-7 border-b-8'>お問い合わせはこちらから</p>
             <div className="max-w-[100%] mx-auto">
                 <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-5">
@@ -45,6 +45,6 @@ export function FooterForm() {
                     </div>
                 </form>
             </div>
-        </footer>
+        </div>
     );
 }
