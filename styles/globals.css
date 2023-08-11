@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html{
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
