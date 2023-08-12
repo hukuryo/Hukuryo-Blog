@@ -5,6 +5,7 @@ import { client } from "@/lib/client";
 
 import { Header } from "../../components/Header";
 import { FooterForm } from "../../components/FooterForm";
+import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 
@@ -28,10 +29,10 @@ const BlogId: React.FC<BlogIdProps> = ({ blog }) => {
                             {createdDate}
                         </p>
                         <div dangerouslySetInnerHTML={{ __html: blog.body }} />
-                        <FooterForm />
                     </div>
                 </div>
             </main>
+            <Footer />
         </>
     );
 };

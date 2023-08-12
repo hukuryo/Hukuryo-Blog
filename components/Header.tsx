@@ -10,7 +10,7 @@ export function Header() {
     return (
         <header>
             <div className="h-24 text-center bg-gray-500 hidden sm:flex">
-                <h1 className="font-bold text-2xl text-white flex justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
+                <h1 className="font-bold text-3xl text-white flex justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
             </div>
             <div className="shadow-lg sm:flex sm:justify-center sm:items-center h-20 border border-gray-200 bg-blue-500 dark:border-gray-600 dark:bg-gray-700">
                 <div className="items-center justify-center hidden  sm:flex w-full">

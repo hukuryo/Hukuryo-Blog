@@ -8,7 +8,6 @@ type Article = {
     id: number;
     title: string;
     publishedAt: string;
-    // 画像の URL を追加
     imageUrl: string;
 };
 
@@ -27,7 +26,6 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
             <Link href={`/books/${article.id}`} legacyBehavior>
                 <a className="block space-y-2">
                     <div className="h-40 mb-2 bg-gray-100 rounded-md">
-                        {/* 画像の URL を追加 */}
                         <img
                         src={article.imageUrl}
                         alt=""
@@ -38,7 +36,6 @@ const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
                         <h5 className="font-bold mb-2">{article.title}</h5>
                         <div className="flex items-center">
                             <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
-                            {/* 日付フォーマットを外に移動 */}
                             <small>{new Date(article.publishedAt).toLocaleDateString("ja-JP", {
                                 year: "numeric",
                                 month: "numeric",
