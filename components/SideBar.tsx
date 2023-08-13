@@ -1,11 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
 
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full bg-white w-80 hidden transition-transform ml-5 md:block" aria-label="Sidebar" aria-hidden="true">
+            <aside id="cta-button-sidebar" className="h-full bg-white w-2/5 hidden transition-transform ml-5 lg:block" aria-label="Sidebar" aria-hidden="true">
                 <div className="shadow-lg h-full px-3 py-4 border-2 dark:bg-gray-700">
                     <div id="dropdown-cta" className="p-4 mt-5 mb-5 rounded-lg border-2">
                         <div className="text-center mb-3">

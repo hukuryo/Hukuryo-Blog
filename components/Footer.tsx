@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="py-12 mt-48 bg-gray-50 dark:bg-gray-800">
             <div className="w-full px-32 mx-auto max-w-8xl">
-                <div className="grid gap-12 md:grid-cols-3 md:gap-12">
+                <div className="grid gap-12 lg:grid-cols-3 lg:gap-12">
                     <div>
                         <h3 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">SNS</h3>
                         <ul>

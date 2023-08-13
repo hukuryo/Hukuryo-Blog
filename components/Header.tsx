@@ -12,23 +12,23 @@ export function Header() {
     };
     return (
         <header>
-            <div className="h-24 text-center hidden md:flex">
+            <div className="h-24 text-center hidden lg:flex">
                 <h1 className="font-bold text-2xl flex border-none justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
             </div>
-            <div className="shadow-lg md:flex md:justify-center md:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
-                <div className="items-center justify-center hidden  md:flex w-full">
+            <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
+                <div className="items-center justify-center hidden lg:flex w-full">
                     <Link href="/" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">トップページ</Link>
                     <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">記事一覧</Link>
                     <Link href="/profile" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">プロフィール</Link>
                     <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">IT書籍紹介</Link>
                 </div>
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">
                         <h1 className="font-bold text-2xl mt-0">Hukuryo-no-Blog</h1>
                         <button
                             onClick={handleMenuOpen}
                             type="button"
-                            className="z-20 md:hidden space-y-2"
+                            className="z-20 lg:hidden space-y-2"
                         >
                             <div
                             className={
