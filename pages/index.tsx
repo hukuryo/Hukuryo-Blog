@@ -7,7 +7,7 @@ import { SideBar } from "../components/SideBar";
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
 
-import { ArticleProps, ArticleContent } from "../types/article";
+import { ArticleProps } from "../types/article";
 import { ScrollUp } from "@/components/ScrollUp";
 
 export const getStaticProps = async () => {
@@ -27,11 +27,11 @@ export default function Home({ articles }: ArticleProps) {
       <main className="md:container md:mx-auto">
           <div className="flex flex-row-reverse">
               <SideBar/>
-              <div className="mt-10 mr-3 ml-5 w-full rounded-md">
-                  <div>
-                      <PageTitle title={"最新の記事"}/>
-                  </div>
+              <div className="mt-10 mr-3 ml-5 mb-10 w-full">
+                <PageTitle title={"最新の記事"}/>
+                <div>
                   <ArticleList articles={articles} />
+                </div>
               </div>
           </div>
       </main>

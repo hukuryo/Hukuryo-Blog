@@ -1,4 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+// import ReactMarkdown from 'react-markdown';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { client } from "@/lib/client";
@@ -8,6 +10,8 @@ import { FooterForm } from "../../components/FooterForm";
 import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
+import { ScrollUp } from "@/components/ScrollUp";
+
 
 const BlogId: React.FC<BlogIdProps> = ({ blog }) => {
     const createdDate = new Date(blog.publishedAt).toLocaleDateString("ja-JP", {
@@ -19,19 +23,25 @@ const BlogId: React.FC<BlogIdProps> = ({ blog }) => {
     return (
         <>
             <Header />
-            <main className="md:container md:mx-auto">
+            <main className="container mx-auto">
                 <div className="flex flex-row-reverse">
                     <SideBar />
                     <div className="mt-5 mb-10 ml-5 w-full">
-                        <h1 className="text-2xl font-bold">{blog.title}</h1>
-                        <p className="mb-2">
-                            <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
-                            {createdDate}
-                        </p>
-                        <div dangerouslySetInnerHTML={{ __html: blog.body }} />
+                        <div className="mb-4">
+                            <small className="text-gray-500">
+                                <FontAwesomeIcon icon={faClock} className="mr-1" />
+                                {createdDate}
+                            </small>
+                        </div>
+                        <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
+                        <div
+                            className="prose max-w-none"
+                            dangerouslySetInnerHTML={{ __html: blog.body }}
+                        />
                     </div>
                 </div>
             </main>
+            <ScrollUp />
             <Footer />
         </>
     );

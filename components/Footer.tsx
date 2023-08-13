@@ -4,9 +4,9 @@ export function Footer() {
     return (
         <footer className="py-12 mt-48 bg-gray-50 dark:bg-gray-800">
             <div className="w-full px-32 mx-auto max-w-8xl">
-                <div className="grid gap-12 md:grid-cols-3 sm:gap-24">
+                <div className="grid gap-12 md:grid-cols-3 md:gap-12">
                     <div>
-                        <h3 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">発信媒体</h3>
+                        <h3 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">SNS</h3>
                         <ul>
                             <li className="mb-4">
                                 <a href="https://github.com/themesberg/flowbite/discussions" rel="noreferrer nofollow" className="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github</a>
@@ -49,7 +49,7 @@ export function Footer() {
                     </div>
                 </div>
                 <hr className='mt-10 mb-10'/>
-                <span className="block text-center text-gray-600 dark:text-gray-400 font-">© 2023 Hukuryo-no-Blog
+                <span className="block text-center text-gray-600 dark:text-gray-400">© 2023 Hukuryo-no-Blog
                 </span>
             </div>
         </footer>

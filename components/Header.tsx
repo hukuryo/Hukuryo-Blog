@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faList, faUser, faBook, faBars } from "@fortawesome/free-solid-svg-icons";
+
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,23 +12,23 @@ export function Header() {
     };
     return (
         <header>
-            <div className="h-24 text-center bg-gray-500 hidden sm:flex">
-                <h1 className="font-bold text-3xl text-white flex justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
+            <div className="h-24 text-center hidden md:flex">
+                <h1 className="font-bold text-2xl flex border-none justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
             </div>
-            <div className="shadow-lg sm:flex sm:justify-center sm:items-center h-20 border border-gray-200 bg-blue-500 dark:border-gray-600 dark:bg-gray-700">
-                <div className="items-center justify-center hidden  sm:flex w-full">
-                    <Link href="/" className="text-md text-white px-5 ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">トップページ</Link>
-                    <Link href="/articles" className="text-md px-5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">記事一覧</Link>
-                    <Link href="/profile" className="text-md px-5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">プロフィール</Link>
-                    <Link href="/books" className="text-md px-5 text-white ease-in-out duration-300 hover:border-white font-bold hover:border-b-4">IT書籍紹介</Link>
+            <div className="shadow-lg md:flex md:justify-center md:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
+                <div className="items-center justify-center hidden  md:flex w-full">
+                    <Link href="/" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">トップページ</Link>
+                    <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">記事一覧</Link>
+                    <Link href="/profile" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">プロフィール</Link>
+                    <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">IT書籍紹介</Link>
                 </div>
-                <div className="sm:hidden">
+                <div className="md:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">
-                        <h1 className="font-bold text-2xl text-white">Hukuryo-no-Blog</h1>
+                        <h1 className="font-bold text-2xl mt-0">Hukuryo-no-Blog</h1>
                         <button
                             onClick={handleMenuOpen}
                             type="button"
-                            className="z-20 sm:hidden space-y-2"
+                            className="z-20 md:hidden space-y-2"
                         >
                             <div
                             className={
@@ -54,11 +57,26 @@ export function Header() {
                             ? "text-left fixed z-10 bg-slate-50 right-0 top-0 w-8/12 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300"
                             : "fixed right-[-100%] ease-linear duration-300"}
                     >
-                        <h5 className="mt-10 pl-3 bg-gray-500 text-white py-2.5">メニュー</h5>
-                        <Link href="/" className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300">トップページ</Link>
-                        <Link href="/articles" className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300">記事一覧</Link>
-                        <Link href="/profile" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">プロフィール</Link>
-                        <Link href="/books" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">IT書籍紹介</Link>
+                        <h5 className="mt-10 pl-3 bg-gray-500 text-white py-2.5">
+                            <FontAwesomeIcon icon={faBars} className="mr-2" />
+                            MENU
+                        </h5>
+                        <Link href="/" className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300">
+                            <FontAwesomeIcon icon={faHome} className="mr-2" />
+                            トップページ
+                        </Link>
+                        <Link href="/articles" className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300">
+                            <FontAwesomeIcon icon={faList} className="mr-2" />
+                            記事一覧
+                        </Link>
+                        <Link href="/profile" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">
+                            <FontAwesomeIcon icon={faUser} className="mr-2" />
+                            プロフィール
+                        </Link>
+                        <Link href="/books" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">
+                            <FontAwesomeIcon icon={faBook} className="mr-2" />
+                            IT書籍紹介
+                        </Link>
                     </nav>
                 </div>
             </div>
