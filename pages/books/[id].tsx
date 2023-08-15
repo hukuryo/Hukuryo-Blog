@@ -1,19 +1,17 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-// import ReactMarkdown from 'react-markdown';
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { client } from "@/lib/client";
 
 import { Header } from "../../components/Header";
-import { FooterForm } from "../../components/FooterForm";
 import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ScrollUp } from "@/components/ScrollUp";
+import { FC } from "react";
 
 
-const BlogId: React.FC<BlogIdProps> = ({ blog }) => {
+const BlogId: FC<BlogIdProps> = ({ blog }) => {
     const createdDate = new Date(blog.publishedAt).toLocaleDateString("ja-JP", {
         year: "numeric",
         month: "numeric",
@@ -40,6 +38,7 @@ const BlogId: React.FC<BlogIdProps> = ({ blog }) => {
                         />
                     </div>
                 </div>
+                
             </main>
             <ScrollUp />
             <Footer />

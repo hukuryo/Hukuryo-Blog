@@ -13,7 +13,6 @@ export default function profile() {
             <Header/>
             <main className="container mx-auto">
                 <div className="flex flex-row-reverse">
-                    <SideBar/>
                     <div className="mt-16 ml-16 w-full rounded-md">
                         <PageTitle title={"プロフィール紹介"}/>
                         <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>

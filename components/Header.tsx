@@ -12,7 +12,7 @@ export function Header() {
     };
     return (
         <header>
-            <div className="h-24 text-center hidden lg:flex">
+            <div className="h-24 text-center hidden bg-gray-200 lg:flex">
                 <h1 className="font-bold text-2xl flex border-none justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
             </div>
             <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
@@ -20,7 +20,7 @@ export function Header() {
                     <Link href="/" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">トップページ</Link>
                     <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">記事一覧</Link>
                     <Link href="/profile" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">プロフィール</Link>
-                    <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">IT書籍紹介</Link>
+                    {/* <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">IT書籍紹介</Link> */}
                 </div>
                 <div className="lg:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">
@@ -72,10 +72,6 @@ export function Header() {
                         <Link href="/profile" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">
                             <FontAwesomeIcon icon={faUser} className="mr-2" />
                             プロフィール
-                        </Link>
-                        <Link href="/books" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">
-                            <FontAwesomeIcon icon={faBook} className="mr-2" />
-                            IT書籍紹介
                         </Link>
                     </nav>
                 </div>
