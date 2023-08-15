@@ -25,12 +25,10 @@ export default function Article({ articles }: ArticleProps) {
     return (
         <>
             <Header />
-            <main className="md:container md:mx-auto">
+            <main className="container mx-auto">
                 <div className="flex flex-row-reverse">
                     <div className="mt-10 mr-3 ml-5 w-full rounded-md">
-                        <div>
                         <PageTitle title={"技術記事一覧"} />
-                        </div>
                         <ArticleList articles={ articles } />
                         <ScrollUp />
                         {/* <FooterForm /> */}
