@@ -7,7 +7,11 @@ export function PageTitle(props: title) {
 
     return (
         <>
-            <h1 className="text-2xl w-64 mt-5 mb-10 font-bold border-b-4 border-gray-400">{title}</h1>
+            <h1 
+                className="inline-flex items-center border-l-8 border-stone-800 pl-4 text-2xl font-semibold text-stone-800 duration-300 dark:border-stone-200 dark:text-stone-200 md:text-2xl lg:text-3xl my-6"
+            >
+                {title}
+            </h1>
         </>
     );
 }
