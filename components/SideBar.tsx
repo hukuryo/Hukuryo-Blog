@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full bg-white w-2/5 hidden py-4 px-3 mt-10 mb-5 rounded-lg border-2 transition-transform ml-5 lg:block" aria-label="Sidebar" aria-hidden="true">
+            <aside id="cta-button-sidebar" className="h-full bg-white w-2/5 hidden py-4 px-3 mb-5 rounded-lg border-2 transition-transform ml-5 lg:block">
                 <div className="text-center mb-3">
                     <img src="" alt="" className="w-1/3 m-auto h-full rounded-md" />
                 </div>

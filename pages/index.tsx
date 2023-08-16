@@ -24,7 +24,7 @@ export default function Home({ articles }: ArticleProps) {
   return (
     <>
       <Header />
-      <main className="mx-10">
+      <main className="p-10">
           <div className="flex flex-row-reverse">
               <div className="mt-10 mr-3 ml-5 mb-10 w-full">
                 <PageTitle title={"最新の記事"}/>
