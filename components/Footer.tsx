@@ -4,9 +4,9 @@ export function Footer() {
     return (
         <footer className="py-12 mt-48 bg-gray-50 dark:bg-gray-800">
             <div className="w-full px-32 mx-auto max-w-8xl">
-                <div className="grid gap-12 lg:grid-cols-3 lg:gap-12">
+                <div className="grid gap-12 sm:grid-cols-3 lg:gap-12">
                     <div>
-                        <h3 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">SNS</h3>
+                        <h3 className="mb-6 border-l-8 border-stone-400 pl-2 text-sm font-semibold text-gray-400 uppercase dark:text-white">SNS</h3>
                         <ul>
                             <li className="mb-4">
                                 <a href="https://github.com/themesberg/flowbite/discussions" rel="noreferrer nofollow" className="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github</a>
@@ -17,7 +17,7 @@ export function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">オススメの記事</h3>
+                        <h3 className="mb-6 text-sm font-semibold border-l-8 border-stone-400 pl-2 text-gray-400 uppercase dark:text-white">オススメの記事</h3>
                         <ul>
                             <li className="mb-4">
                                 <a href="https://discord.gg/4eeurUVvTy" rel="noreferrer nofollow" className="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Discord</a>
@@ -31,7 +31,7 @@ export function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">カテゴリー</h3>
+                        <h3 className="mb-6 text-sm font-semibold text-gray-400 border-l-8 border-stone-400 pl-2 uppercase dark:text-white">カテゴリー</h3>
                         <ul>
                             <li className="mb-4">
                                 <a href="https://flowbite.com/license/" className="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">License (EULA)</a>

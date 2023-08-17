@@ -24,7 +24,7 @@ export default function books({ articles }: ArticleProps) {
     return (
         <>
             <Header />
-            <main className="md:container md:mx-auto">
+            <main className="mx-10">
                 <div className="flex flex-row-reverse">
                     <SideBar/>
                     <div className="mt-10 mr-3 ml-5 w-full rounded-md">

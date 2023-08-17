@@ -2,8 +2,6 @@ import React from "react";
 import { client } from "@/lib/client";
 
 import { Header } from "../../components/Header";
-// import { FooterForm } from "../../components/FooterForm";
-import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle";
 import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
@@ -25,16 +23,17 @@ export default function Article({ articles }: ArticleProps) {
     return (
         <>
             <Header />
-            <main className="container mx-auto">
-                <div className="flex flex-row-reverse">
-                    <div className="mt-10 mr-3 ml-5 w-full rounded-md">
-                        <PageTitle title={"技術記事一覧"} />
-                        <ArticleList articles={ articles } />
-                        <ScrollUp />
-                        {/* <FooterForm /> */}
+            <main className="mx-10">
+                <div className="flex mt-10 flex-row-reverse">
+                    <div className="p-10 mr-3 ml-5 mb-10 w-full">
+                        <PageTitle title={"技術記事"}/>
+                        <div>
+                        <ArticleList articles={articles} />
+                        </div>
                     </div>
                 </div>
             </main>
+            <ScrollUp />
             <Footer />
         </>
     );
