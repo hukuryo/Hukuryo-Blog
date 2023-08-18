@@ -16,18 +16,17 @@ export default function profile() {
             <main className="pt-10 sm:px-20 px-5">
                 <div className="flex flex-row-reverse">
                 <SideBar />
-                    <div className="w-full bg-gray-200 px-10 py-5 rounded-md">
+                    <div className="w-full bg-gray-200 px-10 py-5 pb-10 shadow-lg rounded-md">
                         <PageTitle title={"プロフィール紹介"}/>
                         <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
                         <p className="mt-8">このブログでは技術についての記事などを中心に記事を書いています。</p>
                         <p className="mt-8">このページでは自分の経歴を紹介していきます。</p>
                         <div className="mt-32">
-                            <div className="border border-slate-300 h-80 sm:w-4/5 px-8 pt-8 mb-10 drop-shadow-md">
+                            <div className="border border-slate-300 h-72 shadow-md sm:w-4/5 px-5 pt-8 mb-10 drop-shadow-md">
                                 <p className="text-center mb-7 font-bold">経歴紹介</p>
                                 <p className="mb-7 border-b-4 border-gray-400">2021年3月 大学卒業</p>
                                 <p className="mb-7 border-b-4 border-gray-400">2021年4月 鉄道会社に就職</p>
                                 <p className="mb-7 border-b-4 border-gray-400">2022年11月~ エンジニアに転職</p>
-                                <p className="border-b-4 border-gray-400">官公庁向けのシステム開発に携わる。</p>
                             </div>
                             <p className="mb-10">千葉県民です。今も千葉県在住です。</p>
                             <p className="mb-10">大学まで野球をやっていました。</p>
@@ -41,10 +40,10 @@ export default function profile() {
                                     ・ <Link className='text-lg text-blue-500 hover:underline' href="https://zenn.dev/ryohei0509">Zenn</Link>
                                 </li>
                                 <li className='mb-3'>
-                                    ・ <Link className='text-lg text-blue-500 hover:underline' href="https://twitter.com/hukuryo_">Twitter</Link>
+                                    ・ <Link className='text-lg text-blue-500 hover:underline' href="https://github.com/hukuryo">GitHub</Link>
                                 </li>
                                 <li>
-                                    ・ <Link className='text-lg text-blue-500 hover:underline' href="https://twitter.com/hukuryo_">GitHub</Link>
+                                    ・ <Link className='text-lg text-blue-500 hover:underline' href="https://twitter.com/hukuryo_">Twitter</Link>
                                 </li>
                             </ul>
                         </div>

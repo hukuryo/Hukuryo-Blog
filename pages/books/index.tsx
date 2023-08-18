@@ -28,9 +28,7 @@ export default function books({ articles }: ArticleProps) {
                 <div className="flex flex-row-reverse">
                     <SideBar/>
                     <div className="mt-10 mr-3 ml-5 w-full rounded-md">
-                        <div>
-                            <PageTitle title={"読んだ書籍一覧"}/>
-                        </div>
+                        <PageTitle title={"読んだ書籍一覧"}/>
                         <ArticleList articles={ articles } />
                         <ScrollUp />
                         {/* <FooterForm /> */}
