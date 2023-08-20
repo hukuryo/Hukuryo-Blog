@@ -18,9 +18,7 @@ export default function profile() {
                 <SideBar />
                     <div className="w-full bg-gray-200 px-10 py-5 pb-10 shadow-lg rounded-md">
                         <PageTitle title={"プロフィール紹介"}/>
-                        <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
-                        <p className="mt-8">このブログでは技術についての記事などを中心に記事を書いています。</p>
-                        <p className="mt-8">このページでは自分の経歴を紹介していきます。</p>
+                        <p className="mt-16">このページ内容は筆者の経歴などについてです。</p>
                         <div className="mt-32">
                             <div className="border border-slate-300 h-72 shadow-md sm:w-4/5 px-5 pt-8 mb-10 drop-shadow-md">
                                 <p className="text-center mb-7 font-bold">経歴紹介</p>

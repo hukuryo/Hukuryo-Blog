@@ -7,11 +7,11 @@ import { PageTitle } from "../../components/PageTitle"
 import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
-import { ArticleProps, ArticleContent } from "../../types/article";
+import { ArticleContent, ArticleProps } from "../../types/article";
 
 
 export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: "ryoheiblog" });
+    const data = await client.get({ endpoint: "book" });
     
     return {
         props: {
@@ -26,7 +26,6 @@ export default function books({ articles }: ArticleProps) {
             <Header />
             <main className="mx-10">
                 <div className="flex flex-row-reverse">
-                    <SideBar/>
                     <div className="mt-10 mr-3 ml-5 w-full rounded-md">
                         <PageTitle title={"読んだ書籍一覧"}/>
                         <ArticleList articles={ articles } />

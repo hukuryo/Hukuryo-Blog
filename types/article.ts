@@ -1,14 +1,19 @@
+type ImageUrl = {
+    url: string;
+};
+
 export type ArticleContent = {
     id: number;
     title: string;
     publishedAt: string;
-    imageUrl: string;
+    imageUrl: ImageUrl;
+    body: string;
+    pass: string
 };
 
 export type ArticleProps = {
     articles: ArticleContent[];
 };
-
 
 export type BlogContent = {
     id: number;

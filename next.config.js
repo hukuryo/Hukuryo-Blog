@@ -4,3 +4,9 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  images: {
+    domains: ['images.microcms-assets.io'], // 画像ホスト名をここに追加
+  },
+}
