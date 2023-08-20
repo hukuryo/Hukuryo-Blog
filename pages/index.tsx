@@ -1,13 +1,8 @@
-import { client } from "@/lib/client";
-
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { PageTitle } from "../components/PageTitle";
-import ArticleList from "../components/ArticleList";
-
-import { ArticleProps } from "../types/article";
 import { ScrollUp } from "@/components/ScrollUp";
-import Link from "next/link";
+
 import { SideBar } from "@/components/SideBar";
 
 

@@ -13,19 +13,21 @@ export function Header() {
     return (
         <header>
             <div className="h-24 text-center hidden bg-gray-200 lg:flex">
-                <h1 className="font-bold text-2xl flex border-none justify-center items-center h-full w-full">Hukuryo-no-Blog</h1>
+                <Link href="/" className="font-bold text-2xl flex border-none justify-center items-center h-full w-full">
+                    <h3>Hukuryo-no-Blog</h3>
+                </Link>
             </div>
             <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
                 <div className="items-center justify-center hidden lg:flex w-full">
-                    <Link href="/" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">トップページ</Link>
                     <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">技術記事</Link>
-                    <Link href="/profile" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">プロフィール</Link>
                     <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">読んだ本</Link>
                     <Link href="/hobbies" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2">趣味</Link>
                 </div>
                 <div className="lg:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">
+                    <Link href="/" className="font-bold text-2xl mt-0">
                         <h1 className="font-bold text-2xl mt-0">Hukuryo-no-Blog</h1>
+                    </Link>
                         <button
                             onClick={handleMenuOpen}
                             type="button"
