@@ -1,13 +1,11 @@
 import { Header } from "../../components/Header"
 import { client } from "@/lib/client";
 
-import { FooterForm } from "../../components/FooterForm";
-import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle"
 import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
-import { ArticleContent, ArticleProps } from "../../types/article";
+import { ArticleProps } from "../../types/article";
 
 
 export const getStaticProps = async () => {
@@ -24,9 +22,9 @@ export default function books({ articles }: ArticleProps) {
     return (
         <>
             <Header />
-            <main className="mx-10">
-                <div className="flex flex-row-reverse">
-                    <div className="mt-10 mr-3 ml-5 w-full rounded-md">
+            <main className="px-10 pb-48 bg-indigo-100">
+                <div className="flex pt-10 flex-row-reverse">
+                    <div className="p-10 mr-3 ml-5 mb-10 w-full">
                         <PageTitle title={"読んだ書籍一覧"}/>
                         <ArticleList articles={ articles } />
                         <ScrollUp />

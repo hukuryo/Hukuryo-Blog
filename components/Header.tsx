@@ -13,9 +13,7 @@ export function Header() {
     return (
         <header>
             <div className="h-24 text-center hidden bg-gray-200 lg:flex">
-                <Link href="/" className="font-bold text-2xl flex border-none justify-center items-center h-full w-full">
-                    <h3>Hukuryo-no-Blog</h3>
-                </Link>
+                <h3 className="font-bold text-3xl flex border-none justify-center items-center w-full">Hukuryo-no-Blog</h3>
             </div>
             <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
                 <div className="items-center justify-center hidden lg:flex w-full">
@@ -57,10 +55,10 @@ export function Header() {
                     <nav
                         className={
                         openMenu
-                            ? "text-left fixed z-10 bg-slate-50 right-0 top-0 w-8/12 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300"
-                            : "fixed right-[-100%] ease-linear duration-300"}
+                            ? "text-left fixed z-10 bg-slate-50 right-0 top-0 sm:w-2/5 w-3/5 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300"
+                            : "fixed right-[-150%] ease-linear duration-300"}
                     >
-                        <h5 className="mt-10 pl-3 bg-gray-500 text-white py-2.5">
+                        <h5 className="mt-14 pl-3 bg-gray-500 text-white py-2.5">
                             <FontAwesomeIcon icon={faBars} className="mr-2" />
                             MENU
                         </h5>

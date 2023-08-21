@@ -13,10 +13,10 @@ export default function profile() {
     return (
         <>
             <Header/>
-            <main className="pt-10 sm:px-20 px-5">
+            <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
                 <div className="flex flex-row-reverse">
                 <SideBar />
-                    <div className="w-full bg-gray-200 px-10 py-5 pb-10 shadow-lg rounded-md">
+                    <div className="w-full bg-white px-10 py-5 pb-10 shadow-lg rounded-md">
                         <PageTitle title={"プロフィール紹介"}/>
                         <p className="mt-16">このページ内容は筆者の経歴などについてです。</p>
                         <div className="mt-32">

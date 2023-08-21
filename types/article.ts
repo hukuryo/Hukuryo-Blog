@@ -8,7 +8,7 @@ export type ArticleContent = {
     publishedAt: string;
     imageUrl: ImageUrl;
     body: string;
-    pass: string
+    pass: string;
 };
 
 export type ArticleProps = {

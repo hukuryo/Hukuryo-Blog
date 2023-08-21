@@ -21,10 +21,10 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
     return (
         <>
             <Header />
-            <main className="p-10">
+            <main className="p-10 bg-indigo-100">
                 <div className="flex flex-row-reverse">
                     <SideBar />
-                    <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">
+                    <div className="mb-10 ml-5 p-7 shadow-lg bg-white rounded-md w-full">
                         <div className="mb-4">
                             <small className="text-gray-500">
                                 <FontAwesomeIcon icon={faClock} className="mr-1" />

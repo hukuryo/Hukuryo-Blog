@@ -22,8 +22,8 @@ export default function Article({ articles }: ArticleProps) {
     return (
         <>
             <Header />
-            <main className="mx-10">
-                <div className="flex mt-10 flex-row-reverse">
+            <main className="px-10 pb-48 bg-indigo-100">
+                <div className="flex pt-10 flex-row-reverse">
                     <div className="p-10 mr-3 ml-5 mb-10 w-full">
                         <PageTitle title={"技術記事"}/>
                         <ArticleList articles={articles} />

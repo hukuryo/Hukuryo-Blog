@@ -1,7 +1,7 @@
-import { GetStaticPaths, GetStaticProps } from "next";
+import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { FC } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "@/lib/client";
 
 import { Header } from "../../components/Header";
@@ -9,7 +9,6 @@ import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ScrollUp } from "@/components/ScrollUp";
-
 
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
@@ -22,7 +21,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
     return (
         <>
             <Header />
-            <main className="p-10">
+            <main className="p-10 pb-48 bg-indigo-100">
                 <div className="flex flex-row-reverse">
                     <SideBar />
                     <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">

@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="pt-10 sm:px-20 px-5">
+      <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
                 <div className="flex flex-row-reverse">
                 <SideBar />
-                    <div className="w-full bg-gray-200 px-10 py-5 pb-10 shadow-lg rounded-md">
+                    <div className="w-full bg-white px-10 py-5 pb-10 shadow-lg rounded-md">
                         <PageTitle title={"トップページ"}/>
                           <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
                           <p className="mt-8">このブログでは技術についての記事などを中心に記事を書いています。</p>
