@@ -8,11 +8,15 @@ import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
+import Head from 'next/head';
 
 export default function profile() {
     return (
         <>
             <Header/>
+            <Head>
+                <title>プロフィール紹介</title>
+            </Head>
             <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
                 <div className="flex flex-row-reverse">
                 <SideBar />

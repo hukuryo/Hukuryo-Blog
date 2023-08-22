@@ -8,6 +8,7 @@ import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { Layout } from "@/components/Layout";
 import { ArticleProps } from "../../types/article";
+import Head from "next/head";
 
 export const getStaticProps = async () => {
     const data = await client.get({ endpoint: "tech" });
@@ -24,6 +25,9 @@ export default function Article({ articles }: ArticleProps) {
         <>
             <Header />
             <Layout>
+                <Head>
+                    <title>技術記事一覧</title>
+                </Head>
                 <PageTitle title={"技術記事"}/>
                 <ArticleList articles={articles} pass={"articles"} />
             </Layout>

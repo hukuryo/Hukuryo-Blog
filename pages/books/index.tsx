@@ -7,6 +7,7 @@ import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { Layout } from "@/components/Layout";
 import { ArticleProps } from "../../types/article";
+import Head from "next/head";
 
 
 export const getStaticProps = async () => {
@@ -24,6 +25,9 @@ export default function books({ articles }: ArticleProps) {
         <>
             <Header />
             <Layout>
+                <Head>
+                    <title>読んだ書籍一覧</title>
+                </Head>
                 <PageTitle title={"読んだ書籍一覧"}/>
                 <ArticleList articles={ articles } pass={"books"} />
                 <ScrollUp />

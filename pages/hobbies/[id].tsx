@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ScrollUp } from "@/components/ScrollUp";
+import Head from "next/head";
 
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
@@ -21,6 +22,9 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
     return (
         <>
             <Header />
+            <Head>
+                <title>{blog.title}</title>
+            </Head>
             <main className="p-10 pb-48 bg-indigo-100">
                 <div className="flex flex-row-reverse">
                     <SideBar />

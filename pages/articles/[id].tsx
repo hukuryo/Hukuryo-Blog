@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ScrollUp } from "@/components/ScrollUp";
+import Head from "next/head";
 
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
@@ -24,6 +25,9 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
             <main className="p-10 pb-48 bg-indigo-100">
                 <div className="flex flex-row-reverse">
                     <SideBar />
+                    <Head>
+                        <title>{blog.title}</title>
+                    </Head>
                     <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">
                         <div className="mb-4">
                             <small className="text-gray-500">

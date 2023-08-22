@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Header } from "../../components/Header"
 import { client } from "@/lib/client";
 
@@ -23,10 +24,13 @@ export default function books({ articles }: ArticleProps) {
         <>
             <Header />
             <Layout>
+                <Head>
+                    <title>遊び記録一覧</title>
+                </Head>
                 <PageTitle title={"遊び記録"} />
                 <ArticleList articles={ articles } pass={"hobbies"} />
+                <ScrollUp />
             </Layout>
-            <ScrollUp />
             <Footer />
         </>
     )
