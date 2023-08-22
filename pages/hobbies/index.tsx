@@ -1,8 +1,6 @@
 import { Header } from "../../components/Header"
 import { client } from "@/lib/client";
 
-import { FooterForm } from "../../components/FooterForm";
-import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle"
 import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";

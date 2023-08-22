@@ -24,10 +24,10 @@ export function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-6 text-sm font-semibold border-l-8 border-stone-400 pl-2 text-gray-400 uppercase dark:text-white">オススメの記事</h3>
+                        <h3 className="mb-6 text-sm font-semibold border-l-8 border-stone-400 pl-2 text-gray-400 uppercase dark:text-white">プロフィール</h3>
                         <ul>
                             <li className='mb-3'>
-                                <Link className='text-lg hover:opacity-60 hover:underline' href="/profile">profile</Link>
+                                <Link className='text-lg hover:opacity-60 hover:underline' href="/profile">Profile</Link>
                             </li>
                         </ul>
                     </div>
@@ -35,7 +35,7 @@ export function Footer() {
                         <h3 className="mb-6 text-sm font-semibold text-gray-400 border-l-8 border-stone-400 pl-2 uppercase dark:text-white">カテゴリー</h3>
                         <ul>
                             <li className='mb-3'>
-                                <Link className='text-lg hover:opacity-60 hover:underline' href="/hobby">hobby</Link>
+                                <Link className='text-lg hover:opacity-60 hover:underline' href="/hobbies">Hobby</Link>
                             </li>
                         </ul>
                     </div>

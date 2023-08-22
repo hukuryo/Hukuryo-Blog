@@ -13,7 +13,11 @@ export function Header() {
     return (
         <header>
             <div className="h-24 text-center hidden bg-gray-200 lg:flex">
-                <h3 className="font-bold text-3xl flex border-none justify-center items-center w-full">Hukuryo-no-Blog</h3>
+                <h3 className="font-bold text-3xl flex border-none justify-center items-center w-full">
+                    <Link href="/">
+                        Hukuryo-no-Blog
+                    </Link>
+                </h3>
             </div>
             <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
                 <div className="items-center justify-center hidden lg:flex w-full">
