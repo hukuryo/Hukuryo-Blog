@@ -13,6 +13,7 @@ export type ArticleContent = {
 
 export type ArticleProps = {
     articles: ArticleContent[];
+    pass: string
 };
 
 export type BlogContent = {

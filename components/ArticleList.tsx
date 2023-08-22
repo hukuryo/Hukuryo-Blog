@@ -6,16 +6,16 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import { ArticleProps } from "../types/article";
 
-const ArticleList: React.FC<ArticleProps> = ({ articles }) => {
-
+const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
+    
     return (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {articles.map((article) => (
                 <li key={article.id}>
-                <Link href={`/books/${article.id}`} legacyBehavior>
+                <Link href={`/${ pass }/${article.id}`} legacyBehavior>
                     <a>
                         <article 
-                            className="flex-start mx-auto flex rounded-md border-2 border-stone-200 bg-stone-50 p-4 shadow-md duration-200 transition-transform transform hover:scale-105 hover:opacity-60 md:p-4"
+                            className="flex-start mx-auto flex rounded-md border-2 border-stone-200 bg-stone-50 p-4 shadow-md duration-200 transition-transform transform hover:scale-105 hover:opacity-80 md:p-4"
                         >
                         <Image
                             src={article.imageUrl.url}

@@ -9,7 +9,7 @@ import { ScrollUp } from "@/components/ScrollUp";
 import { ArticleProps, ArticleContent } from "../../types/article";
 
 export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: "ryoheiblog" });
+    const data = await client.get({ endpoint: "tech" });
     
     return {
         props: {
@@ -23,10 +23,10 @@ export default function Article({ articles }: ArticleProps) {
         <>
             <Header />
             <main className="px-10 pb-48 bg-indigo-100">
-                <div className="flex pt-10 flex-row-reverse">
+                <div className="flex t-10 flex-row-reverse">
                     <div className="p-10 mr-3 ml-5 mb-10 w-full">
                         <PageTitle title={"技術記事"}/>
-                        <ArticleList articles={articles} />
+                        <ArticleList articles={articles} pass={"articles"} />
                     </div>
                 </div>
             </main>
