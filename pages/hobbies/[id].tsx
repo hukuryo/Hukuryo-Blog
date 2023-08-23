@@ -8,6 +8,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { BlogIdProps, ArticleContent } from "../../types/article";
+import { ArticlePageLayout } from "@/components/ArticlePageLayout";
 import { ScrollUp } from "@/components/ScrollUp";
 import Head from "next/head";
 
@@ -25,24 +26,22 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
             <Head>
                 <title>{blog.title}</title>
             </Head>
-            <main className="p-10 pb-48 bg-indigo-100">
-                <div className="flex flex-row-reverse">
-                    <SideBar />
-                    <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">
-                        <div className="mb-4">
-                            <small className="text-gray-500">
-                                <FontAwesomeIcon icon={faClock} className="mr-1" />
-                                {createdDate}
-                            </small>
-                        </div>
-                        <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
-                        <div
-                            className="prose max-w-none mb-10"
-                            dangerouslySetInnerHTML={{ __html: blog.body }}
-                        />
+            <ArticlePageLayout>
+                <SideBar />
+                <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">
+                    <div className="mb-4">
+                        <small className="text-gray-500">
+                            <FontAwesomeIcon icon={faClock} className="mr-1" />
+                            {createdDate}
+                        </small>
                     </div>
+                    <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
+                    <div
+                        className="prose max-w-none mb-10"
+                        dangerouslySetInnerHTML={{ __html: blog.body }}
+                    />
                 </div>
-            </main>
+            </ArticlePageLayout>
             <ScrollUp />
             <Footer />
         </>

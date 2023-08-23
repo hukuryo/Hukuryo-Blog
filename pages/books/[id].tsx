@@ -1,15 +1,16 @@
-import { GetStaticPaths, GetStaticProps } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "@/lib/client";
+import { FC } from "react";
+import Head from "next/head";
 
+import { BlogIdProps, ArticleContent } from "../../types/article";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
-import { BlogIdProps, ArticleContent } from "../../types/article";
+import { ArticlePageLayout } from "@/components/ArticlePageLayout";
 import { ScrollUp } from "@/components/ScrollUp";
-import { FC } from "react";
-import Head from "next/head";
 
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
@@ -21,28 +22,26 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
 
     return (
         <>
+            <Head>
+                <title>{blog.title}</title>
+            </Head>
             <Header />
-            <main className="p-10 bg-indigo-100">
-                <div className="flex flex-row-reverse">
-                <Head>
-                    <title>{blog.title}</title>
-                </Head>
-                    <SideBar />
-                    <div className="mb-10 ml-5 p-7 shadow-lg bg-white rounded-md w-full">
-                        <div className="mb-4">
-                            <small className="text-gray-500">
-                                <FontAwesomeIcon icon={faClock} className="mr-1" />
-                                {createdDate}
-                            </small>
-                        </div>
-                        <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
-                        <div
-                            className="prose max-w-none mb-10"
-                            dangerouslySetInnerHTML={{ __html: blog.body }}
-                        />
+            <ArticlePageLayout>
+                <SideBar />
+                <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">
+                    <div className="mb-4">
+                        <small className="text-gray-500">
+                            <FontAwesomeIcon icon={faClock} className="mr-1" />
+                            {createdDate}
+                        </small>
                     </div>
+                    <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
+                    <div
+                        className="prose max-w-none mb-10"
+                        dangerouslySetInnerHTML={{ __html: blog.body }}
+                    />
                 </div>
-            </main>
+            </ArticlePageLayout>
             <ScrollUp />
             <Footer />
         </>
