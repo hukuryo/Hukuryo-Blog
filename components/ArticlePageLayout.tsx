@@ -7,7 +7,7 @@ type LayoutProps = {
 export function ArticlePageLayout({ children }: LayoutProps) {
     return (
         <>
-            <main className="p-10 bg-indigo-100">
+            <main className="p-10 pb-20 bg-indigo-50">
                 <div className="flex flex-row-reverse">
                     {children}
                 </div>

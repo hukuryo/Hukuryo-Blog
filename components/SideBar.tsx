@@ -2,23 +2,19 @@ import Link from 'next/link';
 import Image from 'next/image'
 
 export function SideBar() {
-    const myLoader = () => {
-        return `https://yutaro-blog.net/wp-content/uploads/2023/01/demerit.png`
-    }
     return (
         <>
             <aside id="cta-button-sidebar" className="h-full shadow-md bg-white w-2/5 hidden py-4 px-3 mb-5 rounded-lg border-2 transition-transform ml-5 lg:block">
-                <div className="text-center mb-3">
+                <div className="text-center flex justify-center mb-3">
                     <Image
-                        loader={myLoader}
-                        src="me.png"
-                        alt="見出し画像"
-                        width={100}
+                        src="/profile.png"
+                        alt="Profile Logo"
+                        className="dark:invert rounded-full"
+                        width={80}
                         height={100}
-                        className="w-1/3 m-auto h-full rounded-md"
                     />
                 </div>
-                <h3 className="text-center mt-7 mb-7">Hukuryo</h3>
+                <h3 className="text-center mt-4 mb-7">Hukuryo</h3>
                 <p className="mb-3 text-xs dark:text-blue-400">
                     2022/11~エンジニアになりました。
                     フロント中心に頑張っています。

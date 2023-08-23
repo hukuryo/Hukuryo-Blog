@@ -25,9 +25,9 @@ export default function books({ articles }: ArticleProps) {
             <Header />
             <Layout>
                 <Head>
-                    <title>遊び記録一覧</title>
+                    <title>趣味</title>
                 </Head>
-                <PageTitle title={"遊び記録"} />
+                <PageTitle title={"趣味"} />
                 <ArticleList articles={ articles } pass={"hobbies"} />
                 <ScrollUp />
             </Layout>

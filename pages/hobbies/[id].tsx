@@ -28,7 +28,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
             </Head>
             <ArticlePageLayout>
                 <SideBar />
-                <div className="mb-10 ml-5 p-7 shadow-lg bg-gray-100 rounded-md w-full">
+                <div className="mb-10 ml-5 p-7 shadow-lg bg-white rounded-md w-full">
                     <div className="mb-4">
                         <small className="text-gray-500">
                             <FontAwesomeIcon icon={faClock} className="mr-1" />
