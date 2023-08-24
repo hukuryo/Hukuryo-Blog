@@ -35,7 +35,8 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
                             {createdDate}
                         </small>
                     </div>
-                    <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
+                    <h1 className="text-4xl border-b-2 font-bold pb-6">{blog.title}</h1>
+                    
                     <div
                         className="prose max-w-none mb-10"
                         dangerouslySetInnerHTML={{ __html: blog.body }}
