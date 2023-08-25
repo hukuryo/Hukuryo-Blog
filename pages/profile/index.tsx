@@ -45,12 +45,11 @@ export default function profile() {
                                     ・ <Link className='text-lg text-blue-500 hover:underline' href="https://github.com/hukuryo">GitHub</Link>
                                 </li>
                                 <li>
-                                    ・ <Link className='text-lg text-blue-500 hover:underline' href="https://twitter.com/hukuryo_">Twitter</Link>
+                                    ・ <Link className='text-lg text-blue-500 hover:underline' href="https://twitter.com/hukuryo_">Twitter(X)</Link>
                                 </li>
                             </ul>
                         </div>
                         <ScrollUp />
-                        {/* <FooterForm /> */}
                     </div>
                 </div>
             </main>

@@ -14,7 +14,7 @@ export function Header() {
         <header>
             <div className="h-24 text-center hidden bg-gray-200 lg:flex">
                 <h3 className="font-bold text-3xl flex border-none justify-center items-center w-full">
-                    <Link href="/">
+                    <Link href="/" className="hover:opacity-70">
                         Hukuryo-no-Blog
                     </Link>
                 </h3>

@@ -1,12 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquareXmark } from "@fortawesome/free-solid-svg-icons";
 
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full shadow-md bg-white w-2/5 hidden py-4 px-3 mb-5 rounded-lg border-2 transition-transform ml-5 lg:block">
+            <aside id="cta-button-sidebar" className="h-full shadow-md bg-white w-2/5 hidden py-4 px-3 mb-5 rounded-lg transition-transform ml-5 lg:block">
                 <div className="text-center flex justify-center mb-3">
                     <Image
                         src="/profile.png"
@@ -18,8 +16,8 @@ export function SideBar() {
                 </div>
                 <h3 className="text-center mt-4 mb-7">Hukuryo</h3>
                 <p className="mb-3 text-xs dark:text-blue-400">
-                    2022/11~エンジニアになりました。
-                    フロント中心に頑張っています。
+                    2022/11~エンジニアになりました。<br />
+                    普段はフロント中心に勉強も頑張っています。
                 </p>
                 <div className='mb-10 mt-10 flex items-center justify-center '>
                     <button className="shadow-lg ease-in-out duration-300 hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-1">
