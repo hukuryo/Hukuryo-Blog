@@ -1,5 +1,6 @@
 import React from "react";
 import { client } from "@/lib/client";
+import Link from "next/link";
 
 import { Header } from "../../components/Header";
 import { PageTitle } from "../../components/PageTitle";
@@ -7,6 +8,7 @@ import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { Layout } from "@/components/Layout";
+import { PageTracking } from "@/components/PageTracking";
 import { ArticleProps } from "../../types/article";
 import Head from "next/head";
 
@@ -23,11 +25,12 @@ export const getStaticProps = async () => {
 export default function Article({ articles }: ArticleProps) {
     return (
         <>
+            <Head>
+                <title>技術記事一覧</title>
+            </Head>
             <Header />
             <Layout>
-                <Head>
-                    <title>技術記事一覧</title>
-                </Head>
+                <PageTracking pass={"articles"} pageTitle={"技術記事"}/>
                 <PageTitle title={"技術記事"}/>
                 <ArticleList articles={articles} pass={"articles"} />
             </Layout>

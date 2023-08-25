@@ -8,6 +8,7 @@ import { FC } from "react";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
+import { PageTracking } from "@/components/PageTracking";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ArticlePageLayout } from "@/components/ArticlePageLayout";
 import { ScrollUp } from "@/components/ScrollUp";
@@ -30,12 +31,13 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
                 <SideBar />
                 <div className="mb-10 ml-5 p-7 shadow-lg bg-white rounded-md w-full">
                     <div className="mb-4">
+                        <PageTracking pass={"articles"} pageTitle={"技術記事"} articleTitle={blog.title} articlePass={blog.id}/>
                         <small className="text-gray-500">
                             <FontAwesomeIcon icon={faClock} className="mr-1" />
                             {createdDate}
                         </small>
                     </div>
-                    <h1 className="text-4xl border-b-2 font-bold pb-6">{blog.title}</h1>
+                    <h1 className="text-4xl border-b-2 mt-10 font-bold pb-6">{blog.title}</h1>
                     <div
                         className="prose max-w-none mb-10"
                         dangerouslySetInnerHTML={{ __html: blog.body }}

@@ -6,9 +6,9 @@ import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { Layout } from "@/components/Layout";
+import { PageTracking } from "@/components/PageTracking";
 import { ArticleProps } from "../../types/article";
 import Head from "next/head";
-
 
 export const getStaticProps = async () => {
     const data = await client.get({ endpoint: "book" });
@@ -23,11 +23,12 @@ export const getStaticProps = async () => {
 export default function books({ articles }: ArticleProps) {
     return (
         <>
+            <Head>
+                <title>読んだ書籍一覧</title>
+            </Head>
             <Header />
             <Layout>
-                <Head>
-                    <title>読んだ書籍一覧</title>
-                </Head>
+                <PageTracking pass={"books"} pageTitle={"読んだ書籍一覧"}/>
                 <PageTitle title={"読んだ書籍一覧"}/>
                 <ArticleList articles={ articles } pass={"books"} />
                 <ScrollUp />
