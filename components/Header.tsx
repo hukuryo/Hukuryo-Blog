@@ -19,11 +19,11 @@ export function Header() {
                     </Link>
                 </h3>
             </div>
-            <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
+            <div className="shadow-lg lg:flex bg-white lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
                 <div className="items-center justify-center hidden lg:flex w-full">
-                    <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faLaptopCode} className="mr-1" />技術記事</Link>
-                    <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faBookOpen} className="mr-1" />読んだ本</Link>
-                    <Link href="/hobbies" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faGamepad} className="mr-1" />趣味</Link>
+                    <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faLaptopCode} size="sm" className="mr-1" />技術記事</Link>
+                    <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faBookOpen} size="sm" className="mr-1" />読んだ本</Link>
+                    <Link href="/hobbies" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faGamepad} size="sm" className="mr-1" />趣味</Link>
                 </div>
                 <div className="lg:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">

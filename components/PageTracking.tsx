@@ -12,19 +12,19 @@ export function PageTracking(props: Tracking) {
     return (
         <div className='mb-10'>
             <Link href="/" legacyBehavior>
-                <a className='mr-3 text-sm hover:underline'><FontAwesomeIcon icon={faHome} className='mr-1'/>HOME</a>
+                <a className='mr-3 text-sm hover:underline'><FontAwesomeIcon size="sm" icon={faHome} className='mr-1'/>HOME</a>
             </Link> 
-            <FontAwesomeIcon icon={faAngleRight} />
+            <FontAwesomeIcon size="sm" icon={faAngleRight} />
             <Link href={`/${pass}`} legacyBehavior>
-                <a className='ml-3 text-sm hover:underline'><FontAwesomeIcon icon={faFolder} className='mr-1'/>{pageTitle}</a>
+                <a className='ml-3 text-sm hover:underline'><FontAwesomeIcon size="sm" icon={faFolder} className='mr-1'/>{pageTitle}</a>
             </Link>
             {articleTitle == null ? 
                 null
             : (
                 <>
-                    <FontAwesomeIcon icon={faAngleRight} className='ml-3' />
+                    <FontAwesomeIcon size="sm" icon={faAngleRight} className='ml-3' />
                     <Link href={`/${pass}/${articlePass}`} legacyBehavior>
-                        <a className='ml-3 text-sm hover:underline'><FontAwesomeIcon icon={faFolder} className='mr-1'/>{articleTitle}</a>
+                        <a className='ml-3 text-sm hover:underline'><FontAwesomeIcon size="sm" icon={faFolder} className='mr-1'/>{articleTitle}</a>
                     </Link>
                 </>
             )}

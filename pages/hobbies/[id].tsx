@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClipboard, faClock } from "@fortawesome/free-solid-svg-icons";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "@/lib/client";
 
@@ -24,21 +24,21 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
     
     return (
         <>
-            <Header />
             <Head>
                 <title>{blog.title}</title>
             </Head>
+            <Header />
+            <h1 className="text-4xl text-center mt-10 font-bold pb-6"><FontAwesomeIcon icon={faClipboard} className="mr-2" />{blog.title}</h1>
             <ArticlePageLayout>
                 <SideBar />
                 <div className="mb-10 ml-5 p-7 shadow-lg bg-white rounded-md w-full">
-                    <div className="mb-4">
+                    <div className="mb-10">
                         <PageTracking pass={"hobbies"} pageTitle={"趣味"} articleTitle={blog.title} articlePass={blog.id}/>
                         <small className="text-gray-500">
                             <FontAwesomeIcon icon={faClock} className="mr-1" />
                             {createdDate}
                         </small>
                     </div>
-                    <h1 className="text-4xl border-b-2 mt-10 font-bold pb-6">{blog.title}</h1>
                     <div
                         className="prose max-w-none mb-10"
                         dangerouslySetInnerHTML={{ __html: blog.body }}

@@ -3,11 +3,11 @@
 import Link from 'next/link';
 
 import { Header } from "../../components/Header";
-import { FooterForm } from "../../components/FooterForm";
 import { SideBar } from "../../components/SideBar";
 import { PageTitle } from "../../components/PageTitle";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
+import { PageTracking } from "@/components/PageTracking";
 import Head from 'next/head';
 
 export default function profile() {
@@ -21,6 +21,7 @@ export default function profile() {
                 <div className="flex flex-row-reverse">
                 <SideBar />
                     <div className="w-full bg-white px-10 py-5 pb-10 shadow-lg rounded-md">
+                    <PageTracking pass={"profile"} pageTitle={"プロフィール紹介"}/>
                         <PageTitle title={"プロフィール紹介"}/>
                         <p className="mt-16">このページ内容は筆者の経歴などについてです。</p>
                         <div className="mt-32">
