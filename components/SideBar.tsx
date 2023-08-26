@@ -20,9 +20,11 @@ export function SideBar() {
                     普段はフロント中心に勉強も頑張っています。
                 </p>
                 <div className='mb-10 mt-10 flex items-center justify-center '>
-                    <button className="shadow-lg ease-in-out duration-300 hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-1">
-                        <Link className="text-xs" href="/profile">プロフィール</Link>
-                    </button>
+                        <Link className="text-xs" href="/profile">
+                            <button className="shadow-lg text-xs ease-in-out duration-300 hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-2">
+                                プロフィール
+                            </button>
+                        </Link>
                 </div>
                 <div className='flex justify-center mt-10'>
                     <Link href="https://github.com/hukuryo" className='mr-5 ease-in-out duration-300 hover:scale-110 hover:opacity-50'>
