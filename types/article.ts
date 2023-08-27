@@ -8,6 +8,7 @@ export type ArticleContent = {
     publishedAt: string;
     imageUrl: ImageUrl;
     body: string;
+    category: string;
     pass: string;
 };
 
@@ -22,6 +23,7 @@ export type BlogContent = {
     title: string;
     publishedAt: string;
     body: string;
+    category: string;
 };
 
 export type BlogIdProps = {

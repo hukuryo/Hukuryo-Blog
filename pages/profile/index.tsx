@@ -13,15 +13,15 @@ import Head from 'next/head';
 export default function profile() {
     return (
         <>
-            <Header/>
             <Head>
                 <title>プロフィール紹介</title>
             </Head>
+            <Header/>
+            <PageTracking pass={"profile"} pageTitle={"プロフィール紹介"}/>
             <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
                 <div className="flex flex-row-reverse">
                 <SideBar />
                     <div className="w-full bg-white px-10 py-5 pb-10 shadow-lg rounded-md">
-                    <PageTracking pass={"profile"} pageTitle={"プロフィール紹介"}/>
                         <PageTitle title={"プロフィール紹介"}/>
                         <p className="mt-16">このページ内容は筆者の経歴などについてです。</p>
                         <div className="mt-32">

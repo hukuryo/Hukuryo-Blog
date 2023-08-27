@@ -27,8 +27,8 @@ export default function books({ articles }: ArticleProps) {
                 <title>読んだ書籍一覧</title>
             </Head>
             <Header />
+            <PageTracking pass={"books"} pageTitle={"読んだ書籍一覧"}/>
             <Layout>
-                <PageTracking pass={"books"} pageTitle={"読んだ書籍一覧"}/>
                 <PageTitle title={"読んだ書籍一覧"}/>
                 <ArticleList articles={ articles } pass={"books"} />
                 <ScrollUp />

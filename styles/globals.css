@@ -43,6 +43,9 @@ html {
     padding: 10px;
     margin: 10px 0;
   }
+  strong{
+    list-style: none;
+  }
   img{
     margin: 20px 0;
   }

@@ -28,8 +28,8 @@ export default function Article({ articles }: ArticleProps) {
                 <title>技術記事一覧</title>
             </Head>
             <Header />
+            <PageTracking pass={"articles"} pageTitle={"技術記事"}/>
             <Layout>
-                <PageTracking pass={"articles"} pageTitle={"技術記事"}/>
                 <PageTitle title={"技術記事"}/>
                 <ArticleList articles={articles} pass={"articles"} />
             </Layout>

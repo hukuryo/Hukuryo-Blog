@@ -10,9 +10,9 @@ export function PageTracking(props: Tracking) {
     const { pass, pageTitle, articleTitle, articlePass } = props;
 
     return (
-        <div className='mb-10'>
+        <div className='py-3 pl-3 bg-gray-200'>
             <Link href="/" legacyBehavior>
-                <a className='mr-3 text-sm hover:underline'><FontAwesomeIcon size="sm" icon={faHome} className='mr-1'/>HOME</a>
+                <a className='mr-3 text-sm hover:underline'><FontAwesomeIcon size="sm" icon={faHome} className='mr-1'/>TOP</a>
             </Link> 
             <FontAwesomeIcon size="sm" icon={faAngleRight} />
             <Link href={`/${pass}`} legacyBehavior>

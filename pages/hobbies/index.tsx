@@ -27,8 +27,8 @@ export default function books({ articles }: ArticleProps) {
                 <title>趣味</title>
             </Head>
             <Header />
+            <PageTracking pass={"hobbies"} pageTitle={"趣味"}/>
             <Layout>
-                <PageTracking pass={"hobbies"} pageTitle={"趣味"}/>
                 <PageTitle title={"趣味"} />
                 <ArticleList articles={ articles } pass={"hobbies"} />
                 <ScrollUp />

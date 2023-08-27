@@ -28,13 +28,14 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
                 <title>{blog.title}</title>
             </Head>
             <Header />
+            <PageTracking pass={"hobbies"} pageTitle={"趣味"} articleTitle={blog.title} articlePass={blog.id}/>
             <h1 className="text-4xl text-center mt-10 font-bold pb-6"><FontAwesomeIcon icon={faClipboard} className="mr-2" />{blog.title}</h1>
             <ArticlePageLayout>
                 <SideBar />
                 <div className="mb-10 ml-5 p-7 shadow-lg bg-white rounded-md w-full">
                     <div className="mb-10">
-                        <PageTracking pass={"hobbies"} pageTitle={"趣味"} articleTitle={blog.title} articlePass={blog.id}/>
-                        <small className="text-gray-500">
+                        <span className="text-sm rounded-full p-2 bg-gray-200">{blog.category}</span>
+                        <small className="text-gray-500 ml-2">
                             <FontAwesomeIcon icon={faClock} className="mr-1" />
                             {createdDate}
                         </small>

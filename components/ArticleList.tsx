@@ -7,7 +7,6 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { ArticleProps } from "../types/article";
 
 const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
-    
     return (
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             {articles.map((article) => (
@@ -25,6 +24,7 @@ const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
                             className="my-auto ml-0 mr-4 max-w-full rounded-md border-stone-300 bg-stone-200 shadow-md dark:bg-stone-100 dark:opacity-80 md:h-20 md:w-20"
                         />
                             <div>
+                                <span className="text-sm rounded-full p-2 bg-gray-200">{article.category}</span>
                                 <h3 className="text-sm text-stone-800 line-clamp-3 dark:text-stone-200 md:text-base">{article.title}</h3>
                                 <div className="flex items-center">
                                     <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
