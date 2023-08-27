@@ -9,7 +9,7 @@ export function SideBar() {
                     <Image
                         src="/profile.png"
                         alt="Profile Logo"
-                        className="dark:invert rounded-full"
+                        className="dark:invert my-1 rounded-full"
                         width={80}
                         height={100}
                     />

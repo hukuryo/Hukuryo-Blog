@@ -1,6 +1,5 @@
 import React from "react";
 import { client } from "@/lib/client";
-import Link from "next/link";
 
 import { Header } from "../../components/Header";
 import { PageTitle } from "../../components/PageTitle";
