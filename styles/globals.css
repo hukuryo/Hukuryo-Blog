@@ -37,12 +37,19 @@ html {
     font-weight: bold;
     margin: 12px 0;
   }
-  pre{
+  pre {
+    font-family: Menlo, Monaco, 'Courier New', monospace;
     background-color: black;
-    color: white;
+    color: #fff;
     padding: 10px;
     margin: 10px 0;
-  }
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+code {
+    font-family: inherit;
+    font-size: 1rem;
+}
   strong{
     list-style: none;
   }
