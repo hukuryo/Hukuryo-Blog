@@ -19,11 +19,12 @@ export type ArticleProps = {
 
 export type BlogContent = {
     id: number;
-    imageUrl: string;
+    imageUrl: ImageUrl;
     title: string;
     publishedAt: string;
     body: string;
     category: string;
+
 };
 
 export type BlogIdProps = {
