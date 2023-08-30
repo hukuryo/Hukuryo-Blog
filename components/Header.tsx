@@ -80,7 +80,7 @@ export function Header() {
                         </Link>
                         <Link href="/hobbies" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">
                             <FontAwesomeIcon icon={faGamepad} className="mr-2" />
-                            遊び記録
+                            趣味
                         </Link>
                         <Link href="/profile" className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300">
                             <FontAwesomeIcon icon={faUser} className="mr-2" />
