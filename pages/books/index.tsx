@@ -21,6 +21,10 @@ export const getStaticProps = async () => {
 };
 
 export default function books({ articles }: ArticleProps) {
+    
+    const favoriteArticles = articles.filter(article => article.category === "デザイン");
+
+    console.log(favoriteArticles);
     return (
         <>
             <Head>
