@@ -22,7 +22,6 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
         month: "numeric",
         day: "numeric",
     });
-    
     return (
         <>
             <Head>
@@ -31,8 +30,8 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
             <Header />
             <PageTracking pass={"hobbies"} pageTitle={"趣味"} articleTitle={blog.title} articlePass={blog.id}/>
             <ArticlePageLayout>
-                <SideBar />
-                <div className="mb-10 ml-5 p-7 shadow-lg max-w-4xl bg-white rounded-md w-full">
+                <SideBar blog={blog}/>
+                <div className="mb-10 ml-5 p-7 shadow-lg max-w-3xl bg-white rounded-md w-full">
                     <h1 className="text-3xl font-bold pb-6"><FontAwesomeIcon icon={faClipboard} className="mr-2" />{blog.title}</h1>
                     <div className="bg-secondary-100/50">
                         <div className="w-100 h-60">

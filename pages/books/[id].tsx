@@ -31,7 +31,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
             <PageTracking pass={"books"} pageTitle={"読んだ本"} articleTitle={blog.title} articlePass={blog.id}/>
             <ArticlePageLayout>
                 <SideBar />
-                <div className=" ml-5 p-7 shadow-lg bg-white rounded-md max-w-4xl w-full">
+                <div className=" ml-5 p-7 shadow-lg max-w-3xl bg-white rounded-md w-full">
                     <h1 className="text-3xl font-bold pb-6"><FontAwesomeIcon icon={faClipboard} className="mr-2" />{blog.title}</h1>
                     <div className="bg-secondary-100/50">
                         <div className="w-full h-80">

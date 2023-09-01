@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image'
 
-export function SideBar() {
+import { BlogIdProps } from "../types/article";
+
+export function SideBar(props: BlogIdProps) {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full shadow-md bg-white w-2/5 hidden py-4 px-3 mb-5 rounded-lg transition-transform ml-5 lg:block">
-                <div>
+            <aside id="cta-button-sidebar" className="h-full w-2/5 hidden mb-5 ml-5 lg:block">
+                <div className='bg-white py-4 px-3 rounded-lg shadow-md'>
                     <div className="text-center flex justify-center mb-3">
                         <Image
                             src="/profile.png"
@@ -36,6 +38,7 @@ export function SideBar() {
                         </Link>
                     </div>               
                 </div>
+                {/* <Recommendation/> */}
             </aside>
         </>
     );

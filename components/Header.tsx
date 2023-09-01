@@ -1,15 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faList, faUser, faBookOpen, faGamepad ,faBars, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faUser, faBookOpen, faGamepad ,faBars, faLaptopCode, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 import Link from "next/link";
 import { useState } from "react";
 
 export function Header() {
     const [openMenu, setOpenMenu] = useState(false);
+    // const [isDark, setIsDark] = useState(false);
 
     const handleMenuOpen = () => {
         setOpenMenu(!openMenu);
     };
+
+    // const handleDarkChange = () => {
+    //     setIsDark(!isDark);
+    // }
+
     return (
         <header>
             <div className="h-24 text-center hidden bg-white lg:flex">
@@ -20,11 +26,31 @@ export function Header() {
                 </h3>
             </div>
             <div className="shadow-lg lg:flex bg-white lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
-                <div className="items-center justify-center hidden lg:flex w-full">
+                <div className="items-center justify-center hidden lg:flex ml-7 w-full">
                     <Link href="/articles" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faLaptopCode} size="sm" className="mr-1" />技術記事</Link>
                     <Link href="/books" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faBookOpen} size="sm" className="mr-1" />読んだ本</Link>
                     <Link href="/hobbies" className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"><FontAwesomeIcon icon={faGamepad} size="sm" className="mr-1" />趣味</Link>
                 </div>
+                    {/* <button 
+                        className={
+                            isDark ?
+                            "hidden"
+                            : "px-3 py-2 mr-4 rounded-lg bg-gray-800 text-white"
+                        } 
+                        onClick={handleDarkChange}
+                    >
+                        <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
+                    </button>
+                    <button 
+                        className={
+                            isDark ?
+                            "pr-3 pl-2 py-2 mr-4 bg-white text-gray-800 rounded-lg"
+                            : "hidden"
+                        }
+                        onClick={handleDarkChange}
+                    >
+                        <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+                    </button> */}
                 <div className="lg:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">
                     <Link href="/" className="font-bold text-2xl mt-0">
