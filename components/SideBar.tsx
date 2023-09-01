@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { BlogIdProps } from "../types/article";
 
-export function SideBar(props: BlogIdProps) {
+export function SideBar() {
     return (
         <>
             <aside id="cta-button-sidebar" className="h-full w-2/5 hidden mb-5 ml-5 lg:block">
