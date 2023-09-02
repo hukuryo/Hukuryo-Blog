@@ -10,11 +10,12 @@ export type ArticleContent = {
     body: string;
     category: string;
     pass: string;
+    kinds: string;
 };
 
 export type ArticleProps = {
     articles: ArticleContent[];
-    pass: string
+    pass: string;
 };
 
 export type BlogContent = {
@@ -24,7 +25,7 @@ export type BlogContent = {
     publishedAt: string;
     body: string;
     category: string;
-
+    kinds: string;
 };
 
 export type BlogIdProps = {

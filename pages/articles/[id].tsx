@@ -64,7 +64,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
 
 export const getStaticProps: GetStaticProps<BlogIdProps> = async (context) => {
     const id = context.params?.id as string;
-    const data = await client.get({ endpoint: "tech", contentId: id });
+    const data = await client.get({ endpoint: "articles", contentId: id });
 
     return {
         props: {
@@ -74,7 +74,7 @@ export const getStaticProps: GetStaticProps<BlogIdProps> = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const data = await client.get({ endpoint: "tech" });
+    const data = await client.get({ endpoint: "articles" });
 
     const paths = data.contents.map((content: ArticleContent) => `/articles/${content.id}`);
     return {

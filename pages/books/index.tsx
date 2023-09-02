@@ -11,7 +11,7 @@ import { ArticleProps } from "../../types/article";
 import Head from "next/head";
 
 export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: "book" });
+    const data = await client.get({ endpoint: "articles" });
     
     return {
         props: {
@@ -22,9 +22,8 @@ export const getStaticProps = async () => {
 
 export default function books({ articles }: ArticleProps) {
     
-    const favoriteArticles = articles.filter(article => article.category === "デザイン");
-
-    console.log(favoriteArticles);
+    const bookArticles = articles.filter(article => article.kinds[0] === "books");
+    
     return (
         <>
             <Head>
@@ -34,7 +33,7 @@ export default function books({ articles }: ArticleProps) {
             <PageTracking pass={"books"} pageTitle={"読んだ書籍一覧"}/>
             <Layout>
                 <PageTitle title={"読んだ書籍一覧"}/>
-                <ArticleList articles={ articles } pass={"books"} />
+                <ArticleList articles={ bookArticles } pass={"books"} />
                 <ScrollUp />
             </Layout>
             <Footer />
