@@ -41,7 +41,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
                         </small>
                     </div>
                     <div className="bg-secondary-100/50">
-                        <div className="w-full h-screen shadow-lg rounded-md">
+                        <div className="w-full h-screen mb-10 shadow-lg rounded-md">
                             <Image
                                 src={blog.imageUrl.url}
                                 alt="見出し画像"

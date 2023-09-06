@@ -7,6 +7,9 @@ html {
 }
 
 @layer base {
+  p{
+    margin: 10px 0;
+  }
   h1 {
     font-size: 2em;
     font-weight: bold;
