@@ -34,8 +34,8 @@ export default function books({ articles }: ArticleProps) {
             <Layout>
                 <PageTitle title={"読んだ書籍一覧"}/>
                 <ArticleList articles={ bookArticles } pass={"books"} />
-                <ScrollUp />
             </Layout>
+            <ScrollUp />
             <Footer />
         </>
     )

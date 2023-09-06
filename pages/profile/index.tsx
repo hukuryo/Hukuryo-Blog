@@ -50,10 +50,10 @@ export default function profile() {
                                 </li>
                             </ul>
                         </div>
-                        <ScrollUp />
                     </div>
                 </div>
             </main>
+            <ScrollUp />
             <Footer />
         </>
     )

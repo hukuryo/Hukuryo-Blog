@@ -30,30 +30,30 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
             <PageTracking pass={"articles"} pageTitle={"技術記事"} articleTitle={blog.title} articlePass={blog.id}/>
             <ArticlePageLayout>
                 <SideBar />
-                <div className="mb-10 ml-5 p-7 shadow-lg max-w-3xl bg-white rounded-md w-full">
-                <h1 className="text-3xl font-bold pb-6"><FontAwesomeIcon icon={faClipboard} className="mr-2" />{blog.title}</h1>
-                <div className="bg-secondary-100/50">
-                        <div className="w-full h-80">
-                            <Image
-                                src={blog.imageUrl.url}
-                                alt="見出し画像"
-                                width={40}
-                                height={60}
-                                className="w-full h-full object-cover"
-                            />
+                <div className="mb-10 p-7 mx-auto w-10/12 lg:w-9/12 shadow-lg bg-white rounded-md">
+                    <h1 className="text-3xl font-bold pb-6"><FontAwesomeIcon icon={faClipboard} className="mr-2" />{blog.title}</h1>
+                    <div className="bg-secondary-100/50">
+                            <div className="w-full h-80 m-10 rounded-md">
+                                <Image
+                                    src={blog.imageUrl.url}
+                                    alt="見出し画像"
+                                    width={40}
+                                    height={60}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className="my-10">
-                        <span className="text-sm rounded-full p-2 bg-gray-200">{blog.category}</span>
-                        <small className="text-gray-500 ml-2">
-                            <FontAwesomeIcon icon={faClock} className="mr-1" />
-                            {createdDate}
-                        </small>
-                    </div>
-                    <div
-                        className="prose max-w-none mb-10"
-                        dangerouslySetInnerHTML={{ __html: blog.body }}
-                    />
+                        <div className="my-10">
+                            <span className="text-sm rounded-full p-2 bg-gray-200">{blog.category}</span>
+                            <small className="text-gray-500 ml-2">
+                                <FontAwesomeIcon icon={faClock} className="mr-1" />
+                                {createdDate}
+                            </small>
+                        </div>
+                        <div
+                            className="prose max-w-none mb-10"
+                            dangerouslySetInnerHTML={{ __html: blog.body }}
+                        />
                 </div>
             </ArticlePageLayout>
             <ScrollUp />

@@ -22,6 +22,7 @@ export const getStaticProps = async () => {
 
 export default function books({ articles }: ArticleProps) {
     const hobbyArticles = articles.filter(article => article.kinds[0] === "hobby");
+    
     return (
         <>
             <Head>

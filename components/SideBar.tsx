@@ -3,11 +3,13 @@ import Image from 'next/image'
 
 import { BlogIdProps } from "../types/article";
 
+import { Recommendation } from "../components/Recommendation";
+
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full w-2/5 hidden mb-5 ml-5 lg:block">
-                <div className='bg-white py-4 px-3 rounded-lg shadow-md'>
+            <aside id="cta-button-sidebar" className="h-full hidden mb-5 ml-5 lg:block">
+                <div className='bg-white py-4 px-3 max-w-3xl w-60 rounded-lg shadow-md'>
                     <div className="text-center flex justify-center mb-3">
                         <Image
                             src="/profile.png"
