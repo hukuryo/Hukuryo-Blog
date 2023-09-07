@@ -23,7 +23,7 @@ export default function Home() {
                           <p className="mt-8">よろしくお願いします！</p>
                           <p className="mt-8">このブログは以下の技術スタックで作られています。</p>
                           <div className="mt-10">
-                            <div className="border border-slate-300 rounded-md shadow-md sm:w-4/5 px-5 pt-8 pb-6 mb-10 bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+                            <div className="border max-w-md border-slate-300 rounded-md shadow-md sm:w-4/5 px-5 pt-8 pb-6 mb-10 bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
                               <p className="text-2xl font-semibold mb-7">技術スタック</p>
                               <ul className="list-disc pl-5">
                                 <li className="mb-3">Next.js</li>

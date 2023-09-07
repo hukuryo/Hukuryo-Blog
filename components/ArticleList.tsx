@@ -16,13 +16,13 @@ const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
                             <article 
                                 className="shadow-lg bg-white rounded-lg transition-transform transform hover:scale-105 hover:opacity-80"
                             >
-                                <div className="bg-secondary-100/50">
+                                <div className="h-auto">
                                     <Image
                                         src={article.imageUrl.url}
                                         alt="見出し画像"
                                         width={40}
                                         height={60}
-                                        className="w-full h-48 m-0  scale-100"
+                                        className="w-full h-48 m-0 scale-100"
                                     />
                                 </div>
                                 <div className="p-4">
@@ -35,7 +35,7 @@ const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
                                             day: "numeric",
                                         })}
                                     </small>
-                                    <h4 className="font-medium pt-2 text-slate-900 transition-colors group-hover:text-primary-500">{article.title}</h4>
+                                    <h4 className="font-bold pt-2 text-slate-900 transition-colors group-hover:text-primary-500">{article.title}</h4>
                                 </div>
                             </article>
                         </a>

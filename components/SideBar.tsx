@@ -9,7 +9,7 @@ export function SideBar() {
     return (
         <>
             <aside id="cta-button-sidebar" className="h-full hidden mb-5 ml-5 lg:block">
-                <div className='bg-white py-4 px-3 max-w-3xl w-60 rounded-lg shadow-md'>
+                <div className='bg-white border py-4 px-3 max-w-3xl w-60 rounded-lg shadow-md'>
                     <div className="text-center flex justify-center mb-3">
                         <Image
                             src="/profile.png"
@@ -25,11 +25,11 @@ export function SideBar() {
                         普段はフロント中心に勉強も頑張っています。
                     </p>
                     <div className='mb-10 mt-10 flex items-center justify-center '>
-                            <Link className="text-xs" href="/profile">
-                                <button className="shadow-lg text-xs ease-in-out duration-300 hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-2">
-                                    プロフィール
-                                </button>
-                            </Link>
+                        <Link className="text-xs" href="/profile">
+                            <button className="shadow-lg text-xs ease-in-out duration-300 hover:bg-gray-400 hover:scale-105 bg-gray-500 shadow-gray-500/50 text-white rounded px-2 py-2">
+                                プロフィール
+                            </button>
+                        </Link>
                     </div>
                     <div className='flex justify-center mt-10'>
                         <Link href="https://github.com/hukuryo" className='mr-5 ease-in-out duration-300 hover:scale-110 hover:opacity-50'>
