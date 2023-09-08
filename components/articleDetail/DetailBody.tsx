@@ -4,15 +4,12 @@ import { DetailImage } from "../../components/articleDetail/DetailImage";
 import { DetailCategory } from "../../components/articleDetail/DetailCategory";
 import { DetailTitle } from "../../components/articleDetail/DetailTitle";
 import { BlogIdProps } from "../../types/article";
+import { useArrangeDate } from "../../hooks/useArrangeDay";
 
 export function DetailBody(props: BlogIdProps) {
   const { blog } = props;
 
-  const createdDate = new Date(blog.publishedAt).toLocaleDateString("ja-JP", {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-  });
+  const createdDate = useArrangeDate(blog.publishedAt);
   
   return (
     <div className="mb-10 p-7 mx-auto w-10/12 lg:w-9/12 shadow-lg bg-white rounded-md">

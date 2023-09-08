@@ -9,7 +9,7 @@ export function DetailImage(props: imageUrl) {
     const { imageUrl } = props;
     return (
         <div className="bg-secondary-100/50">
-            <div className="w-full mb-10 shadow-lg rounded-md">
+            <div className="w-full mb-10 shadow-sm rounded-md">
                 <Image
                     src={imageUrl}
                     alt="見出し画像"
