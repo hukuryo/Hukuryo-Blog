@@ -26,15 +26,10 @@ export const getStaticProps = async () => {
 
 export default function Search({ articles }: ArticleProps) { 
     const router = useRouter();
-    const [ AllArticles, setAllArticles ] = useState(articles);
-
     const { s } = router.query;
     const queryText: string = Array.isArray(s) ? s[0] : s || '';
 
-    useEffect(() => {
-        const searchArticles = articles.filter(article => article.title.includes(queryText));
-        setAllArticles(searchArticles);
-    }, [])
+    const searchArticles = articles.filter(article => article.title.includes(queryText));
 
     return (
         <>
@@ -53,13 +48,13 @@ export default function Search({ articles }: ArticleProps) {
                 ) : (
                     <PageTitle title={`「${queryText}」の検索結果`} />
                 )}
-                {AllArticles.length === 0 && (
+                {searchArticles.length === 0 && (
                     <>
                         <p>該当する記事は見つかりませんでした。</p>
                     </>
                 )}
                 <div className="md:flex justify-between">
-                    <ArticleList articles={ AllArticles } pass={"articles"} />
+                    <ArticleList articles={ searchArticles } pass={"articles"} />
                     <SideBar />
                 </div>
             </Layout>
