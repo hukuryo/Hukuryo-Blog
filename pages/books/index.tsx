@@ -7,6 +7,7 @@ import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { Layout } from "@/components/Layout";
 import { PageTracking } from "@/components/PageTracking";
+import { SideBar } from "@/components/SideBar";
 import { ArticleProps } from "../../types/article";
 import Head from "next/head";
 
@@ -33,7 +34,10 @@ export default function books({ articles }: ArticleProps) {
             <PageTracking pass={"books"} pageTitle={"読んだ書籍一覧"}/>
             <Layout>
                 <PageTitle title={"読んだ書籍一覧"}/>
-                <ArticleList articles={ bookArticles } pass={"books"} />
+                <div className="md:flex justify-between">
+                    <ArticleList articles={ bookArticles } pass={"books"} />
+                    <SideBar />
+                </div>
             </Layout>
             <ScrollUp />
             <Footer />

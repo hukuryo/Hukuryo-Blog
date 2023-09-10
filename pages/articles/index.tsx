@@ -1,4 +1,4 @@
-import React from "react";
+import Head from "next/head";
 import { client } from "@/lib/client";
 
 import { Header } from "../../components/Header";
@@ -6,10 +6,10 @@ import { PageTitle } from "../../components/PageTitle";
 import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
+import { SideBar } from "@/components/SideBar";
 import { Layout } from "@/components/Layout";
 import { PageTracking } from "@/components/PageTracking";
 import { ArticleProps } from "../../types/article";
-import Head from "next/head";
 
 export const getStaticProps = async () => {
     const data = await client.get({ endpoint: "articles" });
@@ -33,7 +33,10 @@ export default function Article({ articles }: ArticleProps) {
             <PageTracking pass={"articles"} pageTitle={"技術記事"}/>
             <Layout>
                 <PageTitle title={"技術記事"}/>
-                <ArticleList articles={ techArticles } pass={"articles"} />
+                <div className="md:flex justify-between">
+                    <ArticleList articles={ techArticles } pass={"articles"} />
+                    <SideBar />
+                </div>
             </Layout>
             <ScrollUp />
             <Footer />

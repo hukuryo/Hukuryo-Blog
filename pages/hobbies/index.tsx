@@ -1,13 +1,14 @@
 import Head from "next/head";
-import { Header } from "../../components/Header"
 import { client } from "@/lib/client";
 
+import { Header } from "../../components/Header"
 import { PageTitle } from "../../components/PageTitle";
 import ArticleList from "../../components/ArticleList";
 import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { PageTracking } from "@/components/PageTracking";
 import { Layout } from "@/components/Layout";
+import { SideBar } from "@/components/SideBar";
 import { ArticleProps } from "../../types/article";
 
 export const getStaticProps = async () => {
@@ -32,9 +33,12 @@ export default function books({ articles }: ArticleProps) {
             <PageTracking pass={"hobbies"} pageTitle={"趣味"}/>
             <Layout>
                 <PageTitle title={"趣味"} />
-                <ArticleList articles={ hobbyArticles } pass={"hobbies"} />
-                <ScrollUp />
+                <div className="md:flex justify-between">
+                    <ArticleList articles={ hobbyArticles } pass={"hobbies"} />
+                    <SideBar />
+                </div>
             </Layout>
+            <ScrollUp />
             <Footer />
         </>
     )
