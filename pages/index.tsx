@@ -9,10 +9,10 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-      <Header />
       <Head>
           <title>トップページ</title>
       </Head>
+      <Header />
       <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
                 <div className="flex flex-row-reverse">
                 <SideBar />
