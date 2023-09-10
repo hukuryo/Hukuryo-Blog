@@ -33,8 +33,8 @@ export default function Search({ articles }: ArticleProps) {
 
     return (
         <>
-        <Head>
-                <title>{queryText}</title>
+            <Head>
+                <title>{`「${queryText}」の検索結果`}</title>
             </Head>
             <Header />
             {(queryText.length === 0) ? (
