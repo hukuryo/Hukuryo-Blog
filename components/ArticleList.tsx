@@ -3,12 +3,11 @@ import Link from "next/link";
 import Image from 'next/image';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { useArrangeDate } from "../hooks/useArrangeDay";
 
 import { ArticleProps } from "../types/article";
 
 const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
-    
+
     return (
         <ul className="mt-8 grid grid-cols-1 gap-6 w-full mr-5 md:grid-cols-2">
             {articles.map((article) => (
@@ -31,7 +30,11 @@ const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
                                     <span className="text-sm rounded-full p-2 bg-gray-200 mr-2">{article.category}</span>
                                     <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
                                     <small>
-                                        {useArrangeDate(article.publishedAt)}
+                                        {new Date(article.publishedAt).toLocaleDateString("ja-JP", {
+                                            year: "numeric",
+                                            month: "numeric",
+                                            day: "numeric",
+                                        })}
                                     </small>
                                     <h4 className="font-bold pt-2 text-slate-900 transition-colors group-hover:text-primary-500">{article.title}</h4>
                                 </div>

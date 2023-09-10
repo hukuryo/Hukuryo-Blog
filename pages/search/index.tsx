@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Router, useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { client } from "@/lib/client";
@@ -11,7 +12,7 @@ import { SideBar } from "@/components/SideBar";
 import { Layout } from "@/components/Layout";
 import { PageTracking } from "@/components/PageTracking";
 import { ArticleProps } from "../../types/article";
-import Head from "next/head";
+
 
 export const getStaticProps = async () => {
     const data = await client.get({ endpoint: "articles" });
