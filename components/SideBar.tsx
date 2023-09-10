@@ -1,5 +1,5 @@
-import { SearchInput } from "../components/SearchInput";
-import { SideBarProfile } from "../components/SideBarProfile";
+import { SearchInput } from "@/components/SearchInput";
+import { SideBarProfile } from "@/components/SideBarProfile";
 
 
 export function SideBar() {
