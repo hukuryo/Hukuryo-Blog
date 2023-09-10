@@ -12,6 +12,9 @@ import { SideBar } from "@/components/SideBar";
 import { Layout } from "@/components/Layout";
 import { PageTracking } from "@/components/PageTracking";
 import { ArticleProps } from "../../types/article";
+import { SearchInput } from "@/components/SearchInput";
+import { Profile } from "@/components/Profile";
+import { ResponsiveProfile } from "@/components/ResponsiveProfile";
 
 
 export const getStaticProps = async () => {
@@ -57,6 +60,7 @@ export default function Search({ articles }: ArticleProps) {
                     <ArticleList articles={ searchArticles } pass={"articles"} />
                     <SideBar />
                 </div>
+                <ResponsiveProfile />
             </Layout>
             <ScrollUp />
             <Footer />

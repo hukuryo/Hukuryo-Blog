@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export function SideBarProfile() {
+export function Profile() {
     return (
-        <div className='bg-white border py-4 px-3 max-w-3xl w-60 rounded-lg shadow-md'>
+        <div className='bg-white text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md'>
             <div className="text-center flex justify-center mb-3">
                 <Image
                     src="/profile.png"

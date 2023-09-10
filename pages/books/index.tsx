@@ -10,6 +10,9 @@ import { PageTracking } from "@/components/PageTracking";
 import { SideBar } from "@/components/SideBar";
 import { ArticleProps } from "../../types/article";
 import Head from "next/head";
+import { SearchInput } from "@/components/SearchInput";
+import { Profile } from "@/components/Profile";
+import { ResponsiveProfile } from "@/components/ResponsiveProfile";
 
 export const getStaticProps = async () => {
     const data = await client.get({ endpoint: "articles" });
@@ -38,6 +41,7 @@ export default function books({ articles }: ArticleProps) {
                     <ArticleList articles={ bookArticles } pass={"books"} />
                     <SideBar />
                 </div>
+                <ResponsiveProfile />
             </Layout>
             <ScrollUp />
             <Footer />

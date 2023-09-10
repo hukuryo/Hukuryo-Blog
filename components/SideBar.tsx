@@ -1,13 +1,13 @@
 import { SearchInput } from "@/components/SearchInput";
-import { SideBarProfile } from "@/components/SideBarProfile";
+import { Profile } from "@/components/Profile";
 
 
 export function SideBar() {
     return (
         <>
-            <aside id="cta-button-sidebar" className="h-full hidden mb-5 ml-5 lg:block">
+            <aside id="cta-button-sidebar" className="h-full ml-10 hidden mb-5 lg:block">
                 <SearchInput/>
-                <SideBarProfile />
+                <Profile />
             </aside>
         </>
     );

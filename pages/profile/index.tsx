@@ -9,6 +9,9 @@ import { Footer } from "../../components/Footer";
 import { ScrollUp } from "@/components/ScrollUp";
 import { PageTracking } from "@/components/PageTracking";
 import Head from 'next/head';
+import { SearchInput } from '@/components/SearchInput';
+import { Profile } from '@/components/Profile';
+import { ResponsiveProfile } from '@/components/ResponsiveProfile';
 
 export default function profile() {
     return (
@@ -52,6 +55,7 @@ export default function profile() {
                         </div>
                     </div>
                 </div>
+                <ResponsiveProfile />
             </main>
             <ScrollUp />
             <Footer />

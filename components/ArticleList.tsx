@@ -9,7 +9,7 @@ import { ArticleProps } from "../types/article";
 const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
 
     return (
-        <ul className="mt-8 grid grid-cols-1 gap-6 w-full mr-5 md:grid-cols-2">
+        <ul className="mt-8 grid grid-cols-1 gap-6 w-full md:grid-cols-2">
             {articles.map((article) => (
                 <li key={article.id}>
                     <Link href={`/${ pass }/${article.id}`} legacyBehavior>

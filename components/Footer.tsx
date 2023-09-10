@@ -10,16 +10,16 @@ export function Footer() {
                         <h3 className="mb-6 border-l-8 border-stone-400 pl-2 text-sm font-semibold text-gray-400 uppercase dark:text-white">サイト</h3>
                         <ul>
                         <li className='mb-3'>
-                            <Link className='text-lg hover:opacity-60 hover:underline' href="https://qiita.com/hukuryo">Qiita</Link>
+                            <Link className='text-md hover:opacity-60 hover:underline' href="https://qiita.com/hukuryo">Qiita</Link>
                         </li>
                         <li className='mb-3'>
-                            <Link className='text-lg hover:opacity-60 hover:underline' href="https://zenn.dev/ryohei0509">Zenn</Link>
+                            <Link className='text-md hover:opacity-60 hover:underline' href="https://zenn.dev/ryohei0509">Zenn</Link>
                         </li>
                         <li className='mb-3'>
-                            <Link className='text-lg hover:opacity-60 hover:underline' href="https://github.com/hukuryo">GitHub</Link>
+                            <Link className='text-md hover:opacity-60 hover:underline' href="https://github.com/hukuryo">GitHub</Link>
                         </li>
                         <li>
-                            <Link className='text-lg hover:opacity-60 hover:underline' href="https://twitter.com/hukuryo_">Twitter(X)</Link>
+                            <Link className='text-md hover:opacity-60 hover:underline' href="https://twitter.com/hukuryo_">Twitter(X)</Link>
                         </li>
                         </ul>
                     </div>
@@ -27,7 +27,7 @@ export function Footer() {
                         <h3 className="mb-6 text-sm font-semibold border-l-8 border-stone-400 pl-2 text-gray-400 uppercase dark:text-white">プロフィール</h3>
                         <ul>
                             <li className='mb-3'>
-                                <Link className='text-lg hover:opacity-60 hover:underline' href="/profile">Profile</Link>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="/profile">プロフィール</Link>
                             </li>
                         </ul>
                     </div>
@@ -35,7 +35,13 @@ export function Footer() {
                         <h3 className="mb-6 text-sm font-semibold text-gray-400 border-l-8 border-stone-400 pl-2 uppercase dark:text-white">カテゴリー</h3>
                         <ul>
                             <li className='mb-3'>
-                                <Link className='text-lg hover:opacity-60 hover:underline' href="/hobbies">Hobby</Link>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="/articles">技術記事</Link>
+                            </li>
+                            <li className='mb-3'>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="/books">読んだ本</Link>
+                            </li>
+                            <li className='mb-3'>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="/hobbies">趣味</Link>
                             </li>
                         </ul>
                     </div>
