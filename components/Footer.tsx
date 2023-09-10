@@ -9,18 +9,21 @@ export function Footer() {
                     <div>
                         <h3 className="mb-6 border-l-8 border-stone-400 pl-2 text-sm font-semibold text-gray-400 uppercase dark:text-white">サイト</h3>
                         <ul>
-                        <li className='mb-3'>
-                            <Link className='text-md hover:opacity-60 hover:underline' href="https://qiita.com/hukuryo">Qiita</Link>
-                        </li>
-                        <li className='mb-3'>
-                            <Link className='text-md hover:opacity-60 hover:underline' href="https://zenn.dev/ryohei0509">Zenn</Link>
-                        </li>
-                        <li className='mb-3'>
-                            <Link className='text-md hover:opacity-60 hover:underline' href="https://github.com/hukuryo">GitHub</Link>
-                        </li>
-                        <li>
-                            <Link className='text-md hover:opacity-60 hover:underline' href="https://twitter.com/hukuryo_">Twitter(X)</Link>
-                        </li>
+                            <li className='mb-3'>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="https://qiita.com/hukuryo">Qiita</Link>
+                            </li>
+                            <li className='mb-3'>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="https://zenn.dev/ryohei0509">Zenn</Link>
+                            </li>
+                            <li className='mb-3'>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="https://github.com/hukuryo">GitHub</Link>
+                            </li>
+                            <li className='mb-3'>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="https://twitter.com/hukuryo_">Twitter(X)</Link>
+                            </li>
+                            <li>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="https://www.wantedly.com/id/ryohei0509">Wantedly</Link>
+                            </li>
                         </ul>
                     </div>
                     <div>
