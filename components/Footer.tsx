@@ -4,8 +4,8 @@ import Link from 'next/link';
 export function Footer() {
     return (
         <footer className="py-7 bg-white shadow-lg dark:bg-gray-800">
-            <div className="w-full px-32 mx-auto max-w-8xl">
-                <div className="grid gap-12 sm:grid-cols-3 lg:gap-12">
+            <div className="w-full px-10 sm:px-32 mx-auto max-w-8xl">
+                <div className="grid gap-12 grid-cols-3 lg:gap-12">
                     <div>
                         <h3 className="mb-6 border-l-8 border-stone-400 pl-2 text-sm font-semibold text-gray-400 uppercase dark:text-white">サイト</h3>
                         <ul>

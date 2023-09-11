@@ -18,7 +18,7 @@ export function SearchInput() {
                     type="text"
                     value={inputValue}
                     onChange={inputText}
-                    className="rounded-l-md p-2 border-r-0 border-secondary-300 focus:ring focus:ring-primary-300 focus:ring-opacity-50"
+                    className="rounded-md p-2 border-secondary-300 border focus:ring-opacity-50"
                     placeholder="検索キーワード"
                 />
                 <Link href={`/search?s=${inputValue}`}>

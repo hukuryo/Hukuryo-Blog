@@ -86,7 +86,7 @@ export function Header() {
                         className={
                         openMenu
                             ? "text-left fixed z-10 bg-slate-50 right-0 top-0 sm:w-2/5 w-3/5 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300"
-                            : "fixed right-[-150%] ease-linear duration-300"}
+                            : "fixed right-[-250%] ease-linear duration-300"}
                     >
                         <h5 className="mt-14 pl-3 bg-gray-500 text-white py-2.5">
                             <FontAwesomeIcon icon={faBars} className="mr-2" />
