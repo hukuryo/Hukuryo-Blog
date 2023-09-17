@@ -10,8 +10,6 @@ import { PageTracking } from "@/components/PageTracking";
 import { Layout } from "@/components/Layout";
 import { SideBar } from "@/components/SideBar";
 import { ArticleProps } from "../../types/article";
-import { SearchInput } from "@/components/SearchInput";
-import { Profile } from "@/components/Profile";
 import { ResponsiveProfile } from "@/components/ResponsiveProfile";
 
 export const getStaticProps = async () => {
@@ -26,7 +24,8 @@ export const getStaticProps = async () => {
 
 export default function books({ articles }: ArticleProps) {
     const hobbyArticles = articles.filter(article => article.kinds[0] === "hobby");
-    
+    const latestArticles = articles.slice(0, 3);
+
     return (
         <>
             <Head>
@@ -38,7 +37,7 @@ export default function books({ articles }: ArticleProps) {
                 <PageTitle title={"趣味"} />
                 <div className="md:flex justify-between">
                     <ArticleList articles={ hobbyArticles } pass={"hobbies"} />
-                    <SideBar />
+                    <SideBar articles={ latestArticles } pass={"hobbies"}/>
                 </div>
                 <ResponsiveProfile />
             </Layout>
