@@ -20,7 +20,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
                 <title>{blog.title}</title>
             </Head>
             <Header />
-            <PageTracking pass={"articles"} pageTitle={"技術記事"} articleTitle={blog.title} articlePass={blog.id}/>
+            <PageTracking pass={"tech"} pageTitle={"技術記事"} articleTitle={blog.title} articlePass={blog.id}/>
             <ArticlePageLayout>
                 <SideBar />
                 <DetailBody blog={blog}/>
@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps<BlogIdProps> = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
     const data = await client.get({ endpoint: "articles" });
 
-    const paths = data.contents.map((content: ArticleContent) => `/articles/${content.id}`);
+    const paths = data.contents.map((content: ArticleContent) => `/tech/${content.id}`);
     return {
         paths,
         fallback: false,

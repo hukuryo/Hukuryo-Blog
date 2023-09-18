@@ -1,9 +1,9 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { ArticleProps } from "../types/article";
 import Image from 'next/image';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faClock } from '@fortawesome/free-solid-svg-icons';
+import { ArticleProps } from "../types/article";
 
 export const Recommendation: React.FC<ArticleProps> = ({ articles, pass }) => {
 

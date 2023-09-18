@@ -34,11 +34,11 @@ export default function Article({ articles }: ArticleProps) {
                 <title>技術記事一覧</title>
             </Head>
             <Header />
-            <PageTracking pass={"articles"} pageTitle={"技術記事"}/>
+            <PageTracking pass={"tech"} pageTitle={"技術記事"}/>
             <Layout>
                 <PageTitle title={"技術記事"}/>
                 <div className="md:flex justify-between">
-                    <ArticleList articles={ techArticles } pass={"articles"} />
+                    <ArticleList articles={ techArticles } pass={"tech"} />
                     <SideBar />
                 </div>
                 <ResponsiveProfile />

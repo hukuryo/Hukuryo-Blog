@@ -41,9 +41,9 @@ export default function Search({ articles }: ArticleProps) {
             </Head>
             <Header />
             {(queryText.length === 0) ? (
-                <PageTracking pass={"articles"} pageTitle={`検索結果`}/>
+                <PageTracking pass={"tech"} pageTitle={`検索結果`}/>
             ) : (
-                <PageTracking pass={"articles"} pageTitle={`「${queryText}」の検索結果`}/>
+                <PageTracking pass={"tech"} pageTitle={`「${queryText}」の検索結果`}/>
             )}
             <Layout>
                 {(queryText.length === 0) ? (
@@ -57,7 +57,7 @@ export default function Search({ articles }: ArticleProps) {
                     </>
                 )}
                 <div className="md:flex justify-between">
-                    <ArticleList articles={ searchArticles } pass={"articles"} />
+                    <ArticleList articles={ searchArticles } pass={"tech"} />
                     <SideBar />
                 </div>
                 <ResponsiveProfile />
