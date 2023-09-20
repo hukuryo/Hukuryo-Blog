@@ -1,7 +1,5 @@
 import { SearchInput } from "@/components/SearchInput";
 import { Profile } from "@/components/Profile";
-import { Recommendation } from "@/components/Recommendation";
-import { ArticleProps } from "../types/article";
 
 export const SideBar = () => {
     return (

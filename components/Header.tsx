@@ -54,7 +54,7 @@ export function Header() {
                 <div className="lg:hidden">
                     <div className="flex justify-between items-center h-full mt-6 mx-4">
                     <Link href="/" className="font-bold text-2xl mt-0">
-                        <h1 className="font-bold text-2xl mt-0">Hukuryo-no-Blog</h1>
+                        <h1 className="font-bold text-2xl mt-0 hover:opacity-70">Hukuryo-no-Blog</h1>
                     </Link>
                         <button
                             onClick={handleMenuOpen}

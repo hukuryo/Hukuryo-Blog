@@ -4,7 +4,7 @@ import React from 'react'
 
 export function Profile() {
     return (
-        <div className='bg-white text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md'>
+        <div className='bg-white text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full'>
             <div className="text-center flex justify-center mb-3">
                 <Image
                     src="/profile.png"

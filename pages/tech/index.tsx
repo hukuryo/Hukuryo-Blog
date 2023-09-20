@@ -9,10 +9,8 @@ import { ScrollUp } from "@/components/ScrollUp";
 import { SideBar } from "@/components/SideBar";
 import { Layout } from "@/components/Layout";
 import { PageTracking } from "@/components/PageTracking";
-import { Profile } from "@/components/Profile";
 
 import { ArticleProps } from "../../types/article";
-import { SearchInput } from "@/components/SearchInput";
 import { ResponsiveProfile } from "@/components/ResponsiveProfile";
 
 export const getStaticProps = async () => {

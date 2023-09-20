@@ -24,7 +24,6 @@ export const getStaticProps = async () => {
 
 export default function books({ articles }: ArticleProps) {
     const hobbyArticles = articles.filter(article => article.kinds[0] === "hobby");
-    // const latestArticles = articles.slice(0, 3);
 
     return (
         <>
@@ -37,7 +36,6 @@ export default function books({ articles }: ArticleProps) {
                 <PageTitle title={"趣味"} />
                 <div className="md:flex justify-between">
                     <ArticleList articles={ hobbyArticles } pass={"hobbies"} />
-                    {/* <SideBar articles={ latestArticles } pass={"hobbies"}/> */}
                     <SideBar />
                 </div>
                 <ResponsiveProfile />

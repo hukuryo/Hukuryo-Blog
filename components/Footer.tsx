@@ -38,7 +38,7 @@ export function Footer() {
                         <h3 className="mb-6 text-sm font-semibold text-gray-400 border-l-8 border-stone-400 pl-2 uppercase dark:text-white">カテゴリー</h3>
                         <ul>
                             <li className='mb-3'>
-                                <Link className='text-md hover:opacity-60 hover:underline' href="/articles">技術記事</Link>
+                                <Link className='text-md hover:opacity-60 hover:underline' href="/tech">技術記事</Link>
                             </li>
                             <li className='mb-3'>
                                 <Link className='text-md hover:opacity-60 hover:underline' href="/books">読んだ本</Link>
