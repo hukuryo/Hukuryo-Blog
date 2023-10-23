@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Router, useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react'
+import { useRouter } from "next/router";
 import { client } from "@/lib/client";
 
 import { Header } from "../../components/Header";
@@ -12,58 +11,57 @@ import { SideBar } from "@/components/SideBar";
 import { Layout } from "@/components/Layout";
 import { PageTracking } from "@/components/PageTracking";
 import { ArticleProps } from "../../types/article";
-import { SearchInput } from "@/components/SearchInput";
-import { Profile } from "@/components/Profile";
 import { ResponsiveProfile } from "@/components/ResponsiveProfile";
 
-
 export const getStaticProps = async () => {
-    const data = await client.get({ endpoint: "articles" });
-    
-    return {
-        props: {
-            articles: data.contents,
-        },
-    };
+  const data = await client.get({ endpoint: "articles" });
+
+  return {
+    props: {
+      articles: data.contents,
+    },
+  };
 };
 
-export default function Search({ articles }: ArticleProps) { 
-    const router = useRouter();
-    const { s } = router.query;
-    const queryText: string = Array.isArray(s) ? s[0] : s || '';
+export default function Search({ articles }: ArticleProps) {
+  const router = useRouter();
+  const { s } = router.query;
+  const queryText: string = Array.isArray(s) ? s[0] : s || "";
 
-    const searchArticles = articles.filter(article => article.title.includes(queryText));
+  const searchArticles = articles.filter((article) =>
+    article.title.includes(queryText)
+  );
 
-    return (
-        <>
-            <Head>
-                <title>{`「${queryText}」の検索結果`}</title>
-            </Head>
-            <Header />
-            {(queryText.length === 0) ? (
-                <PageTracking pass={"tech"} pageTitle={`検索結果`}/>
-            ) : (
-                <PageTracking pass={"tech"} pageTitle={`「${queryText}」の検索結果`}/>
-            )}
-            <Layout>
-                {(queryText.length === 0) ? (
-                    <PageTitle title={`検索結果`} />
-                ) : (
-                    <PageTitle title={`「${queryText}」の検索結果`} />
-                )}
-                {searchArticles.length === 0 && (
-                    <>
-                        <p>該当する記事は見つかりませんでした。</p>
-                    </>
-                )}
-                <div className="md:flex justify-between">
-                    <ArticleList articles={ searchArticles } pass={"tech"} />
-                    <SideBar />
-                </div>
-                <ResponsiveProfile />
-            </Layout>
-            <ScrollUp />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Head>
+        <title>{`「${queryText}」の検索結果`}</title>
+      </Head>
+      <Header />
+      {queryText.length === 0 ? (
+        <PageTracking pass={"tech"} pageTitle={`検索結果`} />
+      ) : (
+        <PageTracking pass={"tech"} pageTitle={`「${queryText}」の検索結果`} />
+      )}
+      <Layout>
+        {queryText.length === 0 ? (
+          <PageTitle title={`検索結果`} />
+        ) : (
+          <PageTitle title={`「${queryText}」の検索結果`} />
+        )}
+        {searchArticles.length === 0 && (
+          <>
+            <p>該当する記事は見つかりませんでした。</p>
+          </>
+        )}
+        <div className="md:flex justify-between">
+          <ArticleList articles={searchArticles} pass={"tech"} />
+          <SideBar />
+        </div>
+        <ResponsiveProfile />
+      </Layout>
+      <ScrollUp />
+      <Footer />
+    </>
+  );
 }
