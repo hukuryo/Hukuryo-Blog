@@ -11,6 +11,7 @@ import { SideBar } from "@/components/SideBar";
 import { ArticleProps } from "../../types/article";
 import Head from "next/head";
 import { ResponsiveProfile } from "@/components/ResponsiveProfile";
+import { useRouter } from "next/router";
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "articles" });
