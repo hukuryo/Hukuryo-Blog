@@ -31,12 +31,12 @@ export default function books({ articles }: ArticleProps) {
   return (
     <>
       <Head>
-        <title>読んだ書籍一覧</title>
+        <title>読んだ本</title>
       </Head>
       <Header />
-      <PageTracking pass={"books"} pageTitle={"読んだ書籍一覧"} />
+      <PageTracking pass={"books"} pageTitle={"読んだ本"} />
       <Layout>
-        <PageTitle title={"読んだ書籍一覧"} />
+        <PageTitle title={"読んだ本"} />
         <div className="md:flex justify-between">
           <ArticleList articles={bookArticles} pass={"books"} />
           <SideBar />
